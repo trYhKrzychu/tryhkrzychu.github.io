@@ -75,6 +75,11 @@ header{
     justify-content: center;
     background-color: rgb(68, 68, 68);
     width: 100%;
+    z-index: 9999;
+    transition: 0.3s;
+    position: sticky;
+    top: 0;
+    left: 0;
 }
 .menu-centrum{
     display: flex;
@@ -134,7 +139,7 @@ header{
     align-items: center;
     background-color: rgb(68, 68, 68);
     width: 100%;
-    z-index: 4;
+    z-index: 1;
 }
 .welcome-center{
     display: flex;
@@ -397,8 +402,14 @@ hr{
     height: 100px;
     width: 100px;
 }
-@media screen and (max-width:1720px){
-    .menu-button{
-        display: none;
-    }
+
+
+
+/*.scroll-down .menu{
+    background-color: pink;
+    position: sticky;
 }
+.scroll-up .menu{
+    background-color: #47b649;
+    
+}*/
