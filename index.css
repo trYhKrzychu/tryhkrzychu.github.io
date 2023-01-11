@@ -75,7 +75,6 @@ header{
     flex-wrap: wrap;
     justify-content: center;
     background-color: rgb(68, 68, 68);
-    background-color: pink;
     width: 100%;
     z-index: 9998;
     transition: 0.3s;
@@ -90,7 +89,7 @@ header{
     justify-content: space-between;
     background-color: rgb(68, 68, 68);
     width: 70%;
-    transition: 2s;
+    transition: 0.5s ease-in-out;
 }
 .menu-logo{
     padding: 8px;
@@ -98,6 +97,7 @@ header{
 .menu-logo-photo{
     width: 240px;
     height: 80px;
+    transition: 0.5s ease-in-out;
 }
 .menu-button{
     display: flex;

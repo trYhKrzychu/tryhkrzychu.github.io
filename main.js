@@ -8,6 +8,7 @@ $(document).ready(function(){
         $(".menu-centrum").css("background-color" , "rgba(68, 68, 68, 0)");
         $(".menu-logo-photo").css("width" , "120px");
         $(".menu-logo-photo").css("height" , "40px");
+        $(".menu").css("background-color" , "rgba(68, 68, 68, 0.5)");
         }
   
         else{  	
@@ -15,6 +16,7 @@ $(document).ready(function(){
         $(".menu-centrum").css("background-color" , "rgb(68, 68, 68)");
         $(".menu-logo-photo").css("width" , "240px");
         $(".menu-logo-photo").css("height" , "80px");
+        $(".menu").css("background-color" , "rgb(68, 68, 68)");
         }
     })
   })

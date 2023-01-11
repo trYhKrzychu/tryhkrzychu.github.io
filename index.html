@@ -143,9 +143,30 @@ window.addEventListener("load", function(){
         loader.style.display = "none";
 })
 </script>
-<script type="text/javascript" src="http://code.jquery.com/jquery-latest.js"></script>
-<script type="text/javascript" src="main.js"></script>
+<script src="https://code.jquery.com/jquery-3.6.3.min.js" integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
 
+<script>
+    $(document).ready(function(){
+    $(window).scroll(function(){
+        var scroll = $(window).scrollTop();
+        if (scroll > 50) {
+        $(".menu-centrum").css("width" , "100%");
+        $(".menu-centrum").css("background-color" , "rgba(68, 68, 68, 0)");
+        $(".menu-logo-photo").css("width" , "120px");
+        $(".menu-logo-photo").css("height" , "40px");
+        $(".menu").css("background-color" , "rgba(68, 68, 68, 50)");
+        }
+  
+        else{  	
+        $(".menu-centrum").css("width" , "70%");
+        $(".menu-centrum").css("background-color" , "rgb(68, 68, 68)");
+        $(".menu-logo-photo").css("width" , "240px");
+        $(".menu-logo-photo").css("height" , "80px");
+        $(".menu").css("background-color" , "rgb(68, 68, 68)");
+        }
+    })
+  })
+</script>
 
 </body>
 </html>
