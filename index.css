@@ -75,6 +75,7 @@ header{
     flex-wrap: wrap;
     justify-content: center;
     background-color: rgb(68, 68, 68);
+    background-color: pink;
     width: 100%;
     z-index: 9998;
     transition: 0.3s;
@@ -89,6 +90,7 @@ header{
     justify-content: space-between;
     background-color: rgb(68, 68, 68);
     width: 70%;
+    transition: 2s;
 }
 .menu-logo{
     padding: 8px;
@@ -403,3 +405,7 @@ hr{
     height: 100px;
     width: 100px;
 }
+.menu.scrolled {
+    background-color: #fff !important;
+    font-size: 60px;
+  }
