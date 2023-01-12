@@ -78,7 +78,7 @@ header{
     width: 100%;
     z-index: 9998;
     transition: 0.3s;
-    position: sticky;
+    position: relative;
     top: 0;
     left: 0;
 }
@@ -405,6 +405,43 @@ hr{
     height: 100px;
     width: 100px;
 }
+
+
+.sidebar{
+    background-color: rgb(180, 180, 180);
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    flex-direction: column;
+    width: 70px;
+    height: 550px;
+    border-radius: 0px 10px 10px 0px;
+    position: fixed;
+    left: 0;
+    top: 20vh;
+    transition: 0.2s ease-out;
+}
+.sidebar-logo{
+    width: 85%;
+    margin: 15px;
+}
+.sidebar-button{
+    cursor: pointer;
+    font-size: 40px;
+    margin: 30px;
+    transition: 0.2s ease-out;
+}
+.sidebar-button:hover{
+    color: #47b649;
+}
+.sidebar-button:nth-child(5){
+    margin-left: 25px;
+}
+
+
+
+
+
 #working{
     display: none;
     z-index: 9999;
@@ -425,3 +462,4 @@ hr{
         flex-direction: column;
     }
 }
+
