@@ -40,10 +40,10 @@
             </ul>
             <nav class="sidebar">
                 <div class="sidebar-logo"><img src="web/icon.svg" class="sidebar-logo-icon"></div>
-                <div class="sidebar-button"><i class="icon-home"></i></div>
-                <div class="sidebar-button"><i class="icon-user"></i></div>
-                <div class="sidebar-button"><i class="icon-box"></i></div>
-                <div class="sidebar-button"><i class="icon-vcard"></i></div>
+                <a href="#"><div class="sidebar-button"><i class="icon-home"></i></div></a>
+                <a href="#tp-about"><div class="sidebar-button"><i class="icon-user"></i></div></a>
+                <a href="#tp-services"><div class="sidebar-button"><i class="icon-box"></i></div></a>
+                <a href="#"><div class="sidebar-button"><i class="icon-vcard"></i></div></a>
             </nav>
             </article>
         </section>
@@ -89,7 +89,7 @@
             </div>
             <div id="about-partners-title">Wideo<hr></div>
             <div id="services-description">Przedstawiamy historię naszej firmy w krótkim filmie.</div>
-            <iframe id="yt-video" width="712" height="400" src="https://www.youtube.com/embed/LXb3EKWsInQ" title="YouTube video player" frameborder="0" ></iframe>
+            
         <div id="about-partners">Partnerzy<hr></div>
         <div id="about-partners-div">
             <img id="partners-logo" src="partners\part(1).svg" alt="part">
@@ -157,20 +157,11 @@ window.addEventListener("load", function(){
     $(document).ready(function(){
     $(window).scroll(function(){
         var scroll = $(window).scrollTop();
-        if (scroll > 50) {
-        $(".menu-centrum").css("width" , "100%");
-        $(".menu-centrum").css("background-color" , "rgba(68, 68, 68, 0)");
-        $(".menu-logo-photo").css("width" , "120px");
-        $(".menu-logo-photo").css("height" , "40px");
-        $(".menu").css("background-color" , "rgba(68, 68, 68, 50)");
+        if (scroll > 100) {
+        $(".sidebar").css("right" , "97.2%");
         }
-  
         else{  	
-        $(".menu-centrum").css("width" , "70%");
-        $(".menu-centrum").css("background-color" , "rgb(68, 68, 68)");
-        $(".menu-logo-photo").css("width" , "240px");
-        $(".menu-logo-photo").css("height" , "80px");
-        $(".menu").css("background-color" , "rgb(68, 68, 68)");
+        $(".sidebar").css("right" , "100%");
         }
     })
   })
