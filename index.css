@@ -105,7 +105,7 @@ header{
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
-    min-width: 30%;
+    min-width: 20%;
     max-width: 50%;
 }
 .menu-button-click{
@@ -179,31 +179,7 @@ header{
     text-align: center;
     margin-bottom: 3%;
 }
-#welcome-text-description-down{
-    display: flex;
-    justify-content: space-around;
-    flex-direction: row;
-    align-items: center;
-    width: 100%;
-}
-.welcome-text-description-down-button{
-    font-size: 25px;
-    text-align: center;
-    background-color: rgb(45, 59, 59);
-    border-radius: 25px;
-    outline: 3.5px black solid;
-    width: 30%;
-    transition: 0.2s;
-}
-#welcome-text-description-down-video{
-    font-size: 25px;
-    text-align: center;
-    background-color: rgb(45, 59, 59);
-    border-radius: 25px;
-    outline: 3.5px black solid;
-    min-width: 30%;
-    max-width: 60%;
-}
+
 .about{
     display: flex;
     align-items: center;
@@ -409,13 +385,42 @@ hr{
 }
 .contact{
     display: flex;
-    justify-content: space-around;
+    justify-content: left;
     align-items: center;
     flex-direction: column; 
+}
+.contact form{
+    margin-top: 50px;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    flex-direction: column;
 }
 #contact-title{
     font-size: 35px;
     font-weight: 600;
+}
+#contact-form-email{
+    width: 250px;
+    height: 30px;
+    outline: none;
+    border: none; 
+    border-bottom: 2px solid pink; 
+    background-color: inherit;
+}
+#contact-form-text{
+    width: 250px;
+    height: 60px;
+    outline: none;
+    border: none;
+    border-bottom: 2px solid pink;
+    background-color: inherit;
+}
+input::placeholder{
+    color: black;
+    left: 50px;
+    font-weight: 600;
+    font-size: 15px;
 }
 
 .sidebar{

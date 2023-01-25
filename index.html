@@ -36,7 +36,6 @@
                     <a href="#"><li class="menu-button-click">Start</li></a>
                     <a href="#tp-about"><li class="menu-button-click">O nas</li></a>
                     <a href="#tp-services"><li class="menu-button-click">Usługi</li></a>
-                    <a href="#"><li class="menu-button-click">Kontakt</li></a>
             </ul>
             <nav class="sidebar">
                 <div class="sidebar-logo"><img src="web/icon.svg" class="sidebar-logo-icon"></div>
@@ -52,10 +51,6 @@
             <div class="welcome-text-description">
                 <section class="welcome-text-description-text">Witamy w KIWI-kom!</section>
                 <section class="welcome-text-description-des">Witamy  na oficjalnej stronie KIWI-kom. Znajdziesz tutaj wiele informacji na temat naszej firmy.</section>
-                <div id="welcome-text-description-down">
-                    <section class="welcome-text-description-down-button"><a href="#">Rozpocznij</a></section>
-                    <section id="welcome-text-description-down-video">Obejrzyj video</section>
-                </div>
             </div>
             <div class="welcome-photo">
                 <img class="welcome-photo-logo" src="welcome\welcome.svg" alt="wel-photo">
@@ -147,7 +142,10 @@
         <div id="contact-description">Formularz zgłoszeniowy odnośnie zamówień oraz błędów.</div>
         <div class="contact-form">
             <form>
-                <input type="text" id="contact-form-email">
+                <label for="contact-form-email">Email:</label>
+                <input type="text" id="contact-form-email" placeholder="example123@example.com">
+                <label for="contact-form-text">Treść zgłoszenia:</label>
+                <input type="text" id="contact-form-text" placeholder="Tekst">
             </form>
         </div>
         <div class="contact-author"></div>
