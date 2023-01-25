@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="index.css">
     <link rel="stylesheet" href="fontello\css\fontello.css">
     <link rel="stylesheet" href="fontello2\css\fontello.css">
+    <link rel="stylesheet" href="fontello3\css\fontello.css">
     <link rel="icon" type="image" href="web\icon.svg">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,600;1,700&family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Raleway:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
 </head>
@@ -33,14 +34,14 @@
                 <img class="menu-logo-photo" src="web\logo.svg" alt="logo">
             </div></a>
             <ul class="menu-button">
-                    <a href="#"><li class="menu-button-click">Start</li></a>
-                    <a href="#tp-about"><li class="menu-button-click">O nas</li></a>
-                    <a href="#tp-services"><li class="menu-button-click">Usługi</li></a>
+                    <li class="menu-button-click">Start</li>
+                    <li class="menu-button-click">O nas</li>
+                    <li class="menu-button-click">Usługi</li>
             </ul>
             <nav class="sidebar">
                 <div class="sidebar-logo"><img src="web/icon.svg" class="sidebar-logo-icon"></div>
-                <a href="#"><div class="sidebar-button"><i class="icon-home"></i></div></a>
-                <a href="#tp-about"><div class="sidebar-button"><i class="icon-user"></i></div></a>
+                <a href="index.html"><div class="sidebar-button"><i class="icon-home"></i></div></a>
+               <div class="sidebar-button"><i class="icon-user"></i></div>
                 <a href="#tp-services"><div class="sidebar-button"><i class="icon-box"></i></div></a>
                 <a href="#"><div class="sidebar-button"><i class="icon-vcard"></i></div></a>
             </nav>
@@ -142,10 +143,8 @@
         <div id="contact-description">Formularz zgłoszeniowy odnośnie zamówień oraz błędów.</div>
         <div class="contact-form">
             <form>
-                <label for="contact-form-email">Email:</label>
-                <input type="text" id="contact-form-email" placeholder="example123@example.com">
-                <label for="contact-form-text">Treść zgłoszenia:</label>
-                <input type="text" id="contact-form-text" placeholder="Tekst">
+                <input type="text" id="contact-form-email" placeholder="Twój Email...">
+                <button>Zapisz mnie <i class="icon-right"></i></button>
             </form>
         </div>
         <div class="contact-author"></div>
@@ -174,7 +173,9 @@ window.addEventListener("load", function(){
         }
     })
   })
+  $(".menu-button-click:nth-child(2), .sidebar-button:nth-child(2)").click(function(){$(document).scrollTop(750)});
 </script>
+
 
 </body>
 </html>
