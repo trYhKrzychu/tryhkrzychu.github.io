@@ -248,9 +248,10 @@ header{
     color: #47b649;
     font-size: 25px;
 }
-#yt-video{
-    margin-top:2%; 
-    border-radius:10px;
+#video-about{
+    border-radius: 25px;
+    margin-top: 25px;
+    width: 40%;
 }
 #about-partners{
     margin-top: 25px;
