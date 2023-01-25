@@ -313,7 +313,8 @@ hr{
     width: 50%;
 }
 #services-description,
-#about-description{
+#about-description,
+#contact-description{
     color: rgb(68, 68, 68);
     margin-top: -5px;
 }
@@ -406,7 +407,16 @@ hr{
     height: 100px;
     width: 100px;
 }
-
+.contact{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column; 
+}
+#contact-title{
+    font-size: 35px;
+    font-weight: 600;
+}
 
 .sidebar{
     background-color: rgb(180, 180, 180);
