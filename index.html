@@ -40,10 +40,10 @@
             </ul>
             <nav class="sidebar">
                 <div class="sidebar-logo"><img src="web/icon.svg" class="sidebar-logo-icon"></div>
-                <a href="index.html"><div class="sidebar-button"><i class="icon-home"></i></div></a>
-               <div class="sidebar-button"><i class="icon-user"></i></div>
-                <a href="#tp-services"><div class="sidebar-button"><i class="icon-box"></i></div></a>
-                <a href="#"><div class="sidebar-button"><i class="icon-vcard"></i></div></a>
+                <div class="sidebar-button"><i class="icon-home"></i></div>
+                <div class="sidebar-button"><i class="icon-user"></i></div>
+                <div class="sidebar-button"><i class="icon-box"></i></div>
+                <div class="sidebar-button"><i class="icon-vcard"></i></div>
             </nav>
             </article>
         </section>
@@ -173,7 +173,9 @@ window.addEventListener("load", function(){
         }
     })
   })
-  $(".menu-button-click:nth-child(2), .sidebar-button:nth-child(2)").click(function(){$(document).scrollTop(750)});
+  $(".menu-button-click:nth-child(1), .sidebar-button:nth-of-type(2)").click(function(){$(document).scrollTop(0)});
+  $(".menu-button-click:nth-child(2), .sidebar-button:nth-of-type(3)").click(function(){$(document).scrollTop(750)});
+  $(".menu-button-click:nth-child(3), .sidebar-button:nth-of-type(4)").click(function(){$(document).scrollTop(2150)});
 </script>
 
 
