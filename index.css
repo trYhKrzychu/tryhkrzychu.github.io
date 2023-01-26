@@ -400,7 +400,6 @@ hr{
     top: 30vh;
     padding: 10px;
     transition: 0.2s ease-out;
-    display: none;
 }
 .sidebar-logo{
     width: 100%;
@@ -487,19 +486,6 @@ hr{
     font-size: 20px;
     border: none;
     outline: none;
-}
-.contact button::before{
-    content: "";
-    position: absolute;
-    bottom: 0;
-    width: 0;
-    height:2.5px;
-    border-radius: 50px;
-    background-color: #47b649;
-    transition: width 0.25s ease-out;
-}
-.contact button:hover::before{
-    width: 100%;
 }
 
  
