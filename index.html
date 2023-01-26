@@ -140,18 +140,19 @@
                 <div id="contact-title">Newsletter<hr></div>
                 <div id="contact-description">Dołącz do naszego newslettera.</div>
                 <input type="text" id="contact-form-email" placeholder="Twój email..." required>
-                <button>Zapisz mnie</button>
+                <button id="contact-button">Zapisz mnie <i class="icon-post"></i></button>
             </form>
         <div class="contact-about">
             <div class="contact-buyer">Wykonano na zlecenie: example</div>
         <div class="contact-author">Realizator: trYh_Krzychu</div>
-        <a href="https://www.youtube.com/"><section class="contact-socials-link"><i class="icon-youtube-play"></i></section></a>
-        <a href="https://www.facebook.com/"><section class="contact-socials-link"><i class="icon-facebook"></i></section></a>
-        <a href="https://twitter.com/"><section class="contact-socials-link"><i class="icon-twitter"></i></section></a>
+        <div class="contact-about-icons">
+            <a href="https://www.youtube.com/"><section class="contact-socials-link"><i class="icon-youtube-play"></i></section></a>
+            <a href="https://www.facebook.com/"><section class="contact-socials-link"><i class="icon-facebook"></i></section></a>
+            <a href="https://twitter.com/"><section class="contact-socials-link"><i class="icon-twitter"></i></section></a>
+        </div>
         </div>
     </footer>
 
-<div style="margin-top: 100%;">xd</div>
 https://www.makeuseof.com/responsive-navigation-bar-using-html-and-css/
 &#9776
 
@@ -172,6 +173,17 @@ window.addEventListener("load", function(){
         }
     })
   })
+  const input = document.getElementById("contact-form-email");
+
+input.addEventListener('invalid', function (event) {
+  if (event.target.validity.valueMissing) {
+    event.target.setCustomValidity('Proszę wprowadzić adres email.');
+  }
+})
+
+input.addEventListener('change', function (event) {
+  event.target.setCustomValidity('');
+})
   $(".menu-button-click:nth-child(1), .sidebar-button:nth-of-type(2)").click(function(){$(document).scrollTop(0)});
   $(".menu-button-click:nth-child(2), .sidebar-button:nth-of-type(3)").click(function(){$(document).scrollTop(750)});
   $(".menu-button-click:nth-child(3), .sidebar-button:nth-of-type(4)").click(function(){$(document).scrollTop(2150)});

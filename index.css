@@ -130,7 +130,7 @@ header{
     height:2.5px;
     border-radius: 50px;
     background-color: #47b649;
-    transition: width 0.25s ease-out;
+    transition:  0.25s ease-out;
 }
 .menu-button-click:hover::before{
     width: 100%;
@@ -416,6 +416,9 @@ hr{
     color: #47b649;
 }
 
+
+
+
 .contact{
     display: flex;
     justify-content: space-around;
@@ -468,6 +471,47 @@ hr{
     width: 100%;
     border-radius: 0;
 }
+.contact button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: -15px;
+    margin-right: -12px;
+    align-self: flex-end;
+    text-align: center;
+    font-family: Bai Jamjuree;
+    font-weight: 500;
+    cursor: pointer;
+    background-color: inherit;
+    color: white;
+    font-size: 20px;
+    border: none;
+    outline: none;
+}
+.contact button::before{
+    content: "";
+    position: absolute;
+    bottom: 0;
+    width: 0;
+    height:2.5px;
+    border-radius: 50px;
+    background-color: #47b649;
+    transition: width 0.25s ease-out;
+}
+.contact button:hover::before{
+    width: 100%;
+}
+
+ 
+
+
+
+
+
+
+
+
+
 #working{
     display: none;
     z-index: 9999;
