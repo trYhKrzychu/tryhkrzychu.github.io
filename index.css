@@ -428,16 +428,21 @@ hr{
 }
 .contact form{
     display: flex;
+    width: 25%;
     justify-content: center;
     align-items: flex-start;
     flex-direction: column;
+    background-image: url("web/newsletter.svg");
+    background-position: right;
+    background-repeat: no-repeat;
+    background-size: 200px;
 }
 #contact-title{
     font-size: 35px;
     font-weight: 600;
 }
 #contact-description{
-    color: rgb(180, 180, 180);
+    color: white;
     margin-bottom: 10px;
 }
 #contact-form-email{
@@ -449,13 +454,20 @@ hr{
     outline: none;
     background-color: inherit;
     color: white;
-    border-bottom: 2px black solid;
+    border-bottom: 4px #47b649 solid;
     margin-bottom: 20px;
+    margin-top: 20px;
 }
 #contact-form-email::placeholder{
     color: white;
+    font-family: Bai Jamjuree;
 }
-
+.contact hr{
+    border: #47b649 2px solid;
+    margin-top: 0;
+    width: 100%;
+    border-radius: 0;
+}
 #working{
     display: none;
     z-index: 9999;
