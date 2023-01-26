@@ -426,7 +426,6 @@ input::placeholder{
     height: 280px;
     border-radius: 0px 10px 10px 0px;
     position: fixed;
-    right: 100%;
     top: 30vh;
     padding: 10px;
     transition: 0.2s ease-out;
