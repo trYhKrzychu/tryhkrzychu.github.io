@@ -9,12 +9,6 @@
     <link rel="icon" type="image" href="web\icon.svg">
 </head>
 <body>
-    <div class="captcha">
-        <form id="captcha-form">
-            <div class="h-captcha" data-sitekey="6b6f1b3f-f2e1-4623-b756-279a97349647"></div>
-            <button type="button" onclick="onSubmit()">Submit</button>
-        </form>
-    </div>
 
     <div id="preloading"></div>
     <div id="working"><img id="working-photo" src="web\settings.svg">Strona nie jest przystosowana do urządzeń o szerokości mniejszej niż 1500px.<br>Proszę oddalić stronę.</div>
@@ -166,7 +160,6 @@ https://www.makeuseof.com/responsive-navigation-bar-using-html-and-css/
 &#9776
 
 <script src="web/jquery.js"></script>
-<script src="https://hcaptcha.com/1/api.js" async defer></script>
 <script>
         var loader  =   document.getElementById("preloading");
 window.addEventListener("load", function(){
@@ -222,14 +215,6 @@ input.addEventListener('change', function (event) {
   $(".menu-button-click:nth-child(2), .sidebar-button:nth-of-type(3)").click(function(){$(document).scrollTop(750)});
   $(".menu-button-click:nth-child(3), .sidebar-button:nth-of-type(4)").click(function(){$(document).scrollTop(2100)});
   $(".menu-button-click:nth-child(4), .sidebar-button:nth-of-type(5)").click(function(){$(document).scrollTop(2655)});
-
-      function onSubmit() {
-        hcaptcha.execute();
-      }
-      hcaptcha.onVerify = function(token) {
-        // Tutaj możesz dodać kod, który będzie wykonywany po przejściu weryfikacji hCaptcha
-        // np. ukrycie formularza i wyświetlenie reszty treści strony
-      };
 </script>
 
 
