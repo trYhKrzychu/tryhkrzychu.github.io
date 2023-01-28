@@ -400,6 +400,7 @@ hr{
     top: 30vh;
     padding: 10px;
     transition: 0.2s ease-out;
+    box-shadow: 0px 0px 40px 0px rgba(176, 176, 187, 1);
 }
 .sidebar-logo{
     width: 100%;
@@ -411,8 +412,11 @@ hr{
     font-size: 30px;
     transition: 0.2s ease-out;
 }
+.sidebar-button:nth-of-type(5){
+    margin-left: -5px;
+}
 .sidebar-button:hover{
-    color: #47b649;
+    color: #47b649 !important;
 }
 
 

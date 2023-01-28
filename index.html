@@ -152,6 +152,7 @@
         </div>
         </div>
     </footer>
+    <div style="margin-top: 100%;">xd</div>
 
 https://www.makeuseof.com/responsive-navigation-bar-using-html-and-css/
 &#9776
@@ -171,6 +172,30 @@ window.addEventListener("load", function(){
         else{  	
         $(".sidebar").css("left" , "-5%");
         }
+        if (scroll > 0 && scroll < 750){
+        $(".sidebar-button:nth-of-type(2)").css("color" , "#47b649" );
+        }
+        else{
+        $(".sidebar-button:nth-of-type(2)").css("color" , "inherit");
+        }
+        if (scroll > 750 && scroll < 2100){
+        $(".sidebar-button:nth-of-type(3)").css("color" , "#47b649" );
+        }
+        else{
+        $(".sidebar-button:nth-of-type(3)").css("color" , "inherit");
+        }
+        if (scroll > 2099 && scroll < 2655){
+        $(".sidebar-button:nth-of-type(4)").css("color" , "#47b649" );
+        }
+        else{
+        $(".sidebar-button:nth-of-type(4)").css("color" , "inherit");
+        }
+        if (scroll > 2655 && scroll < 3000){
+        $(".sidebar-button:nth-of-type(5)").css("color" , "#47b649" );
+        }
+        else{
+        $(".sidebar-button:nth-of-type(5)").css("color" , "inherit");
+        }
     })
   })
   const input = document.getElementById("contact-form-email");
@@ -186,8 +211,8 @@ input.addEventListener('change', function (event) {
 })
   $(".menu-button-click:nth-child(1), .sidebar-button:nth-of-type(2)").click(function(){$(document).scrollTop(0)});
   $(".menu-button-click:nth-child(2), .sidebar-button:nth-of-type(3)").click(function(){$(document).scrollTop(750)});
-  $(".menu-button-click:nth-child(3), .sidebar-button:nth-of-type(4)").click(function(){$(document).scrollTop(2150)});
-  $(".menu-button-click:nth-child(4), .sidebar-button:nth-of-type(5)").click(function(){$(document).scrollTop(2500)});
+  $(".menu-button-click:nth-child(3), .sidebar-button:nth-of-type(4)").click(function(){$(document).scrollTop(2100)});
+  $(".menu-button-click:nth-child(4), .sidebar-button:nth-of-type(5)").click(function(){$(document).scrollTop(2655)});
 </script>
 
 
