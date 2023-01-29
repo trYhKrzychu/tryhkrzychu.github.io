@@ -168,16 +168,16 @@ header{
     align-items: center;
 }
 .welcome-photo-logo{
-    height: 350px;
+    height: 400px;
 }
 .welcome-text-description-text{
-    font-size: 50px;
+    font-size: 55px;
     font-weight: 600;
 }
 .welcome-text-description-des{
-    font-size: 17px;
+    font-size: 20px;
     color: rgb(180, 180, 180);
-    width: 50%;
+    width: 60%;
     text-align: center;
     margin-bottom: 3%;
 }
@@ -362,11 +362,12 @@ hr{
     justify-content: space-around;
     align-items: center;
     width: 100%;
+    height: 400px;
     background: linear-gradient(to top, #ffffff 50%, rgb(68, 68, 68) 50%);
 }
 #transport-cart{
-    height: 220px;
-    width: 220px;
+    height: 300px;
+    width: 300px;
     box-shadow: 0px 15px 30px -5px rgba(66, 68, 90, 1);
     background-color: white;
     border-radius: 10px;
@@ -377,7 +378,7 @@ hr{
 #transport-center{
     display: flex;
     justify-content: space-around;
-    width: 60%;
+    width: 75%;
     align-items: center;
     flex-direction: row;
 }
@@ -505,18 +506,10 @@ hr{
     justify-content: center;
 }
 
-
-
-
-
-
-
-
-
-
+/* Temporary class with too small width of device */
 #working{
     display: none;
-    z-index: 9998;
+    z-index: 99998;
     width: 100%;
     height: 100vh;
     position: fixed;
@@ -526,6 +519,56 @@ hr{
 #working-photo{
     width: 30%;
 }
+
+/* Animations of website */
+@keyframes welcome-photo-logo{
+    0%{
+        opacity: 0.5;
+        scale: 1.3;
+    }
+    100%{
+        opacity: 1;
+        scale: inherit;
+    }
+}
+@keyframes welcome-text-description{
+    0%{
+        opacity: 0.5;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+@keyframes transport-cart{
+    0%{
+        margin-top: 100px;
+    }
+    100%{
+        margin-top: inherit;
+    }
+}
+
+/* Animations added to classes */
+.welcome-photo-logo{
+    animation: welcome-photo-logo 1s ease-out ;
+}
+.welcome-text-description{
+    animation: welcome-text-description 0.5s ease-in ;
+}
+#transport-cart:nth-child(1){
+    animation: transport-cart 1s ease-in-out;
+}
+#transport-cart:nth-child(2){
+    animation: transport-cart 1.2s ease-in-out;
+}
+#transport-cart:nth-child(3){
+    animation: transport-cart 1.4s ease-in-out;
+}
+#transport-cart:nth-child(4){
+    animation: transport-cart 1.6s ease-in-out;
+}
+
+/* Version for mobile phone and devices with width under 1500px */
 @media screen and (max-width: 1500px){
     #working{
         display: flex;

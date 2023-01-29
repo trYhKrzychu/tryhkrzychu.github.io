@@ -36,6 +36,7 @@
                     <li class="menu-button-click">Start</li>
                     <li class="menu-button-click">O nas</li>
                     <li class="menu-button-click">Usługi</li>
+                    <li class="menu-button-click">Newsletter</li>
             </ul>
             <nav class="sidebar">
                 <div class="sidebar-logo"><img src="web/icon.svg" class="sidebar-logo-icon"></div>
@@ -201,7 +202,7 @@ window.addEventListener("load", function(){
 
 input.addEventListener('invalid', function (event) {
   if (event.target.validity.valueMissing) {
-    event.target.setCustomValidity('Proszę wprowadzić adres email.');
+    event.target.setCustomValidity('Proszę wprowadzić adres email. (PRZYKŁAD, NIGDZIE NIE ZOSTANIE WYSŁANY EMAIL!)');
   }
 })
 
