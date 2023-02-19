@@ -188,7 +188,7 @@ header{
     justify-content: center;
     flex-direction: column;
     background-color: white;
-    width: 100%;
+    width: 100%; 
 }
 .about-photo{
     width: 20%;
@@ -547,6 +547,14 @@ hr{
     100%{
         margin-top: inherit;
         opacity: 1;
+    }
+}
+@keyframes getting-up{
+    0%{
+        margin-top: 50px;
+    }
+    100%{
+        margin-top: inherit;
     }
 }
 
