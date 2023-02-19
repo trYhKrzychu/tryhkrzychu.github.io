@@ -549,14 +549,7 @@ hr{
         opacity: 1;
     }
 }
-@keyframes getting-up{
-    0%{
-        margin-top: 50px;
-    }
-    100%{
-        margin-top: inherit;
-    }
-}
+
 
 /* Animations added to classes */
 .welcome-photo-logo{
@@ -589,4 +582,3 @@ hr{
         flex-direction: column;
     }
 }
-
