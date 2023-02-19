@@ -159,7 +159,12 @@
  
 
 <script src="web/jquery.js"></script>
-
+<script>
+    var loader  =   document.getElementById("preloading");
+window.addEventListener("load", function(){
+    loader.style.display = "none";
+})
+</script>
 
 
 </body>

@@ -1,12 +1,6 @@
-
-        var loader  =   document.getElementById("preloading");
-window.addEventListener("load", function(){
-        loader.style.display = "none";
-})
     $(document).ready(function(){
     $(window).scroll(function(){
         var scroll = $(window).scrollTop();
-
         if (scroll > 100) {
         $(".sidebar").css("left" , "0%");
         }
