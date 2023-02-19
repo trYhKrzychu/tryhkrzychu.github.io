@@ -213,6 +213,12 @@ input.addEventListener('change', function (event) {
   $(".menu-button-click:nth-child(2), .sidebar-button:nth-of-type(3)").click(function(){$(document).scrollTop(750)});
   $(".menu-button-click:nth-child(3), .sidebar-button:nth-of-type(4)").click(function(){$(document).scrollTop(2100)});
   $(".menu-button-click:nth-child(4), .sidebar-button:nth-of-type(5)").click(function(){$(document).scrollTop(2655)});
+
+  window.addEventListener('load', function() {
+  var element = document.getElementById('preloading'); // zastąp 'example-element' swoim identyfikatorem elementu HTML
+  element.classList.add('welcome-photo-logo'); // zastąp 'animate' nazwą klasy CSS zawierającą animację @keyframe
+});
+
 </script>
 
 
