@@ -51,6 +51,11 @@ header{
     max-width: 50%;
     position: relative;
 }
+.social-contact-socials img{
+    width: 20px;
+    margin-left: 5px;
+    border-radius: 2px;
+}
 .social-contact-socials{
     transition: 0.5s;
     justify-content: right;
