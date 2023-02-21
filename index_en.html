@@ -137,6 +137,81 @@
                 </section>
             </div> 
         </div>
+        <div class="services-opinion">
+            <div class="services-opinion-title">Opinions<hr></div>
+            <div class="services-opinion-description">Our Customers are always happy!</div>
+            <div class="services-opinion-card-cards">
+                    <div class="services-opinion-card"> 
+                        <div class="services-opinion-card-name">Adrian</div>
+                        <div class="services-opinion-card-ratings">
+                            <i class="icon-star-filled"></i>
+                            <i class="icon-star-filled"></i>
+                            <i class="icon-star-filled"></i>
+                            <i class="icon-star-filled"></i>
+                            <i class="icon-star-filled"></i>
+                        </div>
+                        <div class="services-opinion-card-description">
+                            Fastest delivery I even seen before! I got my lens after 3 hours.<br> <i style="font-size: 10px;">From Polish</i>
+                        </div>
+                    </div>
+                    <div class="services-opinion-card">
+                
+                        <div class="services-opinion-card-name">Paweł</div>
+                        <div class="services-opinion-card-ratings">
+                            <i class="icon-star-filled"></i>
+                            <i class="icon-star-filled"></i>
+                            <i class="icon-star-filled"></i>
+                            <i class="icon-star-filled"></i>
+                            <i class="icon-star-filled" style="color:#f8f8f8;"></i>
+                        </div>
+                        <div class="services-opinion-card-description">
+                            Customer service is always ready to help. Never happened to me that someone didn't answer!<br> <i style="font-size: 10px;">From Polish</i>
+                        </div>
+                    </div>
+                    <div class="services-opinion-card">
+                        
+                        <div class="services-opinion-card-name">Elżbieta</div>
+                        <div class="services-opinion-card-ratings">
+                            <i class="icon-star-filled"></i>
+                            <i class="icon-star-filled"></i>
+                            <i class="icon-star-filled"></i>
+                            <i class="icon-star-filled"></i>
+                            <i class="icon-star-filled"></i>
+                        </div>
+                        <div class="services-opinion-card-description">
+                            Readable website of shop. Always website works the fastest it can.<br> <i style="font-size: 10px;">From Polish</i>
+                        </div>
+                    </div>
+                    <div class="services-opinion-card">
+                        
+                        <div class="services-opinion-card-name">Weronika</div>
+                        <div class="services-opinion-card-ratings">
+                            <i class="icon-star-filled"></i>
+                            <i class="icon-star-filled"></i>
+                            <i class="icon-star-filled"></i>
+                            <i class="icon-star-filled"></i>
+                            <i class="icon-star-filled"></i>
+                        </div>
+                        <div class="services-opinion-card-description">
+                            Big choice of products, I haven't seen such a large range for a long time.<br> <i style="font-size: 10px;">From Polish</i>
+                        </div>
+                    </div>
+                    <div class="services-opinion-card">
+                        
+                        <div class="services-opinion-card-name">Anastazja</div>
+                        <div class="services-opinion-card-ratings">
+                            <i class="icon-star-filled"></i>
+                            <i class="icon-star-filled"></i>
+                            <i class="icon-star-filled"></i>
+                            <i class="icon-star-filled"></i>
+                            <i class="icon-star-filled" style="color:#f8f8f8;"></i>
+                        </div>
+                        <div class="services-opinion-card-description">
+                            Ordered products get delivered in one part, with set of shop labels (Interesting idea)<br> <i style="font-size: 10px;">From Polish</i>
+                        </div>
+                    </div>
+                </div>    
+        </div>
     </section>
     <footer class="contact"> 
             <form>
@@ -157,67 +232,68 @@
         </div>
     </footer>
  
-<script src="photos/web/jquery.js"></script>
-<script>
-        var loader  =   document.getElementById("preloading");
-window.addEventListener("load", function(){
-        loader.style.display = "none";
-})
-$(document).ready(function(){
-    $(window).scroll(function(){
-        var scroll = $(window).scrollTop();
-        if (scroll > 100) {
-        $(".sidebar").css("left" , "0%");
-        }
-        else{  	
-        $(".sidebar").css("left" , "-5%");
-        }
-        if (scroll > 0 && scroll < 749){
-        $(".sidebar-button:nth-of-type(2)").css("color" , "#47b649" );
-        }
-        else{
-        $(".sidebar-button:nth-of-type(2)").css("color" , "inherit");
-        }
-
-        if (scroll > 749 && scroll < 2100){
-        $(".sidebar-button:nth-of-type(3)").css("color" , "#47b649" );
-        }
-        else{
-        $(".sidebar-button:nth-of-type(3)").css("color" , "inherit");
-        }
-
-        if (scroll > 2099 && scroll < 2654){
-        $(".sidebar-button:nth-of-type(4)").css("color" , "#47b649" );
-        }
-        else{
-        $(".sidebar-button:nth-of-type(4)").css("color" , "inherit");
-        }
-
-        if (scroll > 2654 && scroll < 3000){
-        $(".sidebar-button:nth-of-type(5)").css("color" , "#47b649" );
-        }
-        else{
-        $(".sidebar-button:nth-of-type(5)").css("color" , "inherit");
-        }
+ 
+    <script src="photos/web/jquery.js"></script>
+    <script>
+            var loader  =   document.getElementById("preloading");
+    window.addEventListener("load", function(){
+            loader.style.display = "none";
     })
-  })
-  const input = document.getElementById("contact-form-email");
-
-input.addEventListener('invalid', function (event) {
-  if (event.target.validity.valueMissing) {
-    event.target.setCustomValidity('Proszę wprowadzić adres email. (PRZYKŁAD, NIGDZIE NIE ZOSTANIE WYSŁANY EMAIL!)');
-  }
-})
-
-input.addEventListener('change', function (event) {
-  event.target.setCustomValidity('');
-})
-  $(".menu-button-click:nth-child(1), .sidebar-button:nth-of-type(2)").click(function(){$(document).scrollTop(0)});
-  $(".menu-button-click:nth-child(2), .sidebar-button:nth-of-type(3)").click(function(){$(document).scrollTop(750)});
-  $(".menu-button-click:nth-child(3), .sidebar-button:nth-of-type(4)").click(function(){$(document).scrollTop(2100)});
-  $(".menu-button-click:nth-child(4), .sidebar-button:nth-of-type(5)").click(function(){$(document).scrollTop(2655)});
-
-</script>
+    $(document).ready(function(){
+        $(window).scroll(function(){
+            var scroll = $(window).scrollTop();
+            if (scroll > 100) {
+            $(".sidebar").css("left" , "0%");
+            }
+            else{  	
+            $(".sidebar").css("left" , "-5%");
+            }
+            if (scroll > 0 && scroll < 749){
+            $(".sidebar-button:nth-of-type(2)").css("color" , "#47b649" );
+            }
+            else{
+            $(".sidebar-button:nth-of-type(2)").css("color" , "inherit");
+            }
+    
+            if (scroll > 749 && scroll < 2100){
+            $(".sidebar-button:nth-of-type(3)").css("color" , "#47b649" );
+            }
+            else{
+            $(".sidebar-button:nth-of-type(3)").css("color" , "inherit");
+            }
+    
+            if (scroll > 2099 && scroll < 2654){
+            $(".sidebar-button:nth-of-type(4)").css("color" , "#47b649" );
+            }
+            else{
+            $(".sidebar-button:nth-of-type(4)").css("color" , "inherit");
+            }
+    
+            if (scroll > 2654 && scroll < 3000){
+            $(".sidebar-button:nth-of-type(5)").css("color" , "#47b649" );
+            }
+            else{
+            $(".sidebar-button:nth-of-type(5)").css("color" , "inherit");
+            }
+        })
+      })
+      const input = document.getElementById("contact-form-email");
+    
+    input.addEventListener('invalid', function (event) {
+      if (event.target.validity.valueMissing) {
+        event.target.setCustomValidity('Proszę wprowadzić adres email. (PRZYKŁAD, NIGDZIE NIE ZOSTANIE WYSŁANY EMAIL!)');
+      }
+    })
+    
+    input.addEventListener('change', function (event) {
+      event.target.setCustomValidity('');
+    })
+      $(".menu-button-click:nth-child(1), .sidebar-button:nth-of-type(2)").click(function(){$(document).scrollTop(0)});
+      $(".menu-button-click:nth-child(2), .sidebar-button:nth-of-type(3)").click(function(){$(document).scrollTop(750)});
+      $(".menu-button-click:nth-child(3), .sidebar-button:nth-of-type(4)").click(function(){$(document).scrollTop(2325)});
+      $(".menu-button-click:nth-child(4), .sidebar-button:nth-of-type(5)").click(function(){$(document).scrollTop(2750)});
+    
+    </script>
 
 
 </body>
