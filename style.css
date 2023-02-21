@@ -510,6 +510,37 @@ hr{
     align-items: center;
     justify-content: center;
 }
+/* Class with reviews of clients */
+.services-opinion-title{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+.services-opinion{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+}
+.services-opinion-card{
+    width: 15%;
+    height: 300px;
+    background-color: pink;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    flex-wrap: nowrap;
+}
+.services-opinion-card-photo img{
+    width: 100px;
+    height: 100px;
+    border-radius: 100%;
+}
+
 
 /* Temporary class with too small width of device */
 #working{
