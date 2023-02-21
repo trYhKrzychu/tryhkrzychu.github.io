@@ -297,7 +297,8 @@ hr{
 }
 #services-description,
 #about-description,
-#contact-description{
+#contact-description,
+.services-opinion-description{
     color: rgb(68, 68, 68);
     margin-top: -5px;
 }
@@ -424,9 +425,6 @@ hr{
     color: #47b649 !important;
 }
 
-
-
-
 .contact{
     display: flex;
     justify-content: space-around;
@@ -515,30 +513,60 @@ hr{
     display: flex;
     justify-content: center;
     align-items: center;
-    
+    color: black;
+    font-size: 35px;
+    font-weight: 600;
 }
 .services-opinion{
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-direction: row;
-    flex-wrap: wrap;
+    flex-direction: column;
+    text-align: center;
+    margin-top: 75px;
     width: 100%;
 }
+.services-opinion-title{
+    display: flex;
+    flex-direction: column;
+}
 .services-opinion-card{
-    width: 15%;
-    height: 300px;
-    background-color: pink;
+    width: 10%;
+    height: 175px;
+    padding: 20px;
+    background-color: white;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     flex-wrap: nowrap;
+    margin: 10px;
+    position: relative;
+    box-shadow: 0px 15px 30px -5px rgba(66, 68, 90, 1);
+    border-radius: 10px;
 }
-.services-opinion-card-photo img{
-    width: 100px;
-    height: 100px;
-    border-radius: 100%;
+.services-opinion-card-name{
+    position: absolute;
+    top: 30px;
+    font-weight: 600;
+}
+.services-opinion-card-ratings{
+    position: absolute;
+    top: 50px;
+    color: rgb(240, 187, 81)
+}
+.services-opinion-card-description{
+    width: 85%;
+    position: absolute;
+    top: 75px;
+}
+.services-opinion-card-cards{
+    margin:10px 0px 20px 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    width: 100%;
 }
 
 
