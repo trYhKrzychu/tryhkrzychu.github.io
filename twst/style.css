@@ -186,6 +186,9 @@ body nav .indicator {
   background-size: cover;
   animation: tlo 2s;
 }
+.everything-footage-2{
+  height: 1000px;
+}
 .everything-footage-button{
   display: flex;
   justify-content: center;
@@ -461,7 +464,7 @@ body nav .indicator {
   scale: 1.05;
 }
 .everything-photo{
-  margin-top: 700px;
+  margin-top: 500px;
   padding-top: 50px;
 }
 .everything-photo-right{
