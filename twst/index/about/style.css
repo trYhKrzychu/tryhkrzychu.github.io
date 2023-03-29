@@ -1,0 +1,419 @@
+@import url('https://fonts.googleapis.com/css2?family=Bai+Jamjuree:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Bai Jamjuree;
+}
+
+:root{
+  --kolor1: #2b054e;
+  --kolor2: #443f8f; 
+  --kolor2-tlo: #443f8fb3;
+  --kolor3: #6578c4; 
+  --kolor4: #84addb; 
+  --kolor5: #aadef3; 
+}
+
+html, body {
+  min-height: 100vh;
+  background: var(--kolor1);
+  scroll-behavior: smooth;
+  user-select: none;
+}
+#loading{
+  background: var(--kolor1) url("../../photos/web/preloading.gif") no-repeat center center;
+  background-size: 5%;
+  z-index: 99999;
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+}
+.back{
+  position: fixed;
+  bottom: 10px;
+  right: -5%;
+  background-color: var(--kolor5);
+  cursor: pointer;
+  width: 50px;
+  height: 50px;
+  border-radius: 100%;
+  border: var(--kolor1) 4px solid;
+  z-index: 9999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  transition: 0.3s;
+}
+body nav {
+  width: 100%;
+  height: 70px;
+  background: #fff;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+body nav ul {
+  display: flex;
+  justify-content: space-between;
+  width: 35%;
+  padding-right: 10px;
+}
+.logo{
+  width: 65%;
+  display: flex;
+  justify-content: left;
+}
+.logo-icon{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: row;
+  width: 20%;
+}
+.logo ion-icon{
+  font-size: 2em;
+  text-align: center;
+  transition: 0.5s;
+  cursor: pointer;
+  color: var(--kolor1);
+}
+.logo-icon .logo-icon-fb:hover{
+  color: rgb(66 103 178);
+}
+.logo-icon .logo-icon-dc:hover{
+  color: #7289da;
+}
+.logo-icon .logo-icon-ig:hover{
+  color: #fa7e1e;
+}
+body nav ul li {
+  position: relative;
+  list-style: none;
+  width: 70px;
+  height: 70px;
+  z-index: 1;
+}
+body nav .menu li a {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  text-align: center;
+  font-weight: 600;
+}
+body nav .menu li a .icon {
+  position: relative;
+  display: block;
+  line-height: 75px;
+  font-size: 1.5em;
+  text-align: center;
+  transition: 0.5s;
+  color: var(--kolor1);
+}
+body nav .menu li a .text {
+  position: absolute;
+  color: var(--kolor1);
+  font-weight: 600;
+  font-size: 0.75em;
+  letter-spacing: 0.05em;
+  transition: 0.5s;
+  opacity: 0;
+  transform: translateY(-25px);
+}
+body nav .menu li.active a .icon {
+  transform: translateY(32px);
+}
+body nav .menu li.active a .text {
+  opacity: 1;
+  transform: translateY(-15px);
+}
+body nav .menu li:nth-child(1).active ~ .indicator {
+  transform: translateX(0%);
+}
+body nav .menu li:nth-child(2).active ~ .indicator {
+  transform: translateX(145px);
+}
+body nav .menu li:nth-child(3).active ~ .indicator {
+  transform: translateX(293px);
+}
+body nav .menu li:nth-child(4).active ~ .indicator {
+  transform: translateX(439px);
+}
+body nav .menu li:nth-child(5).active ~ .indicator {
+  transform: translateX(585px);
+}
+body nav .indicator {
+  position: absolute;
+  top: 49%;
+  width: 70px;
+  height: 70px;
+  background: var(--kolor4);
+  border-radius: 50%;
+  border: 5px solid var(--kolor1);
+  transition: 0.5s;
+}
+.stopka{
+  width: 100%;
+  height: 150px;
+  background-color: var(--kolor2);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 20px 20px 40px 20px;
+  margin-top: 52%;
+  transition: 0.3s;
+}
+.przyciski{
+  width:80%;
+  height: 100px;
+  color: white;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: flex-start;
+  align-content: center;
+  margin: auto;
+  font-weight: bolder;
+}
+.orzyciski a:visited{
+  color: white;
+  }
+.przyciski a{
+  color: white;
+  text-decoration:none
+}
+#home{
+  margin: 20px;
+  cursor: pointer;
+  color: white;
+}
+#onas{
+  margin: 20px;
+  cursor: pointer;
+}
+#oferta{
+  margin: 20px;
+  cursor: pointer;
+}
+#blog{
+  margin: 20px;
+  cursor: pointer;
+}
+#kontakt{
+  margin: 20px;
+  cursor: pointer;
+}
+#copyright{
+  color: white;
+  cursor: pointer;
+  font-weight: bolder;
+}  
+.box {
+  position: absolute;
+  right: calc(50% - 165px);
+  top: 150px;
+  width: 380px;
+  height: 850px;
+  background: #1c1c1c;
+  border-radius: 8px;
+  overflow: hidden;
+  transition: 0.2s;
+  animation: cv 1s;
+}
+  .box::before {
+      content: '';
+      z-index: 1;
+      position: absolute;
+      top: -50%;
+      left: -50%;
+      width: 380px;
+      height: 850px;
+      transform-origin: bottom right;
+      background: linear-gradient(0deg,transparent,var(--kolor1),var(--kolor1));
+      animation: animate 6s linear infinite;
+  }
+  .box::after {
+      content: '';
+      z-index: 1;
+      position: absolute;
+      top: -50%;
+      left: -50%;
+      width: 380px;
+      height: 850px;
+      transform-origin: bottom right;
+      background: linear-gradient(0deg,transparent,var(--kolor1),var(--kolor1));
+      animation: animate 6s linear infinite;
+      animation-delay: -3s;
+  }
+form {
+  position: absolute;
+  inset: 2px;
+  background: var(--kolor2);
+  padding: 50px 40px;
+  border-radius: 8px;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+}
+h2 {
+  color: var(--kolor4);
+  font-weight: 500;
+  text-align: center;
+  letter-spacing: 0.1em;
+  height: 20px;
+}
+.inputBox {
+  position: relative;
+  width: 300px;
+  margin-top: 35px;
+  transition: opacity 0.5s ease-out;
+}
+  .inputBox input {
+      position: relative;
+      width: 100%;
+      padding: 20px 10px 10px;
+      background: transparent;
+      outline: none;
+      box-shadow: none;
+      border: none;
+      color: #23242a;
+      font-size: 1em;
+      letter-spacing: 0.05em;
+      transition: 0.5s;
+      z-index: 10;
+  }
+  .inputBox span {
+      position: absolute;
+      left: 0;
+      padding: 20px 0px 10px;
+      pointer-events: none;
+      font-size: 1em;
+      color: #8f8f8f;
+      letter-spacing: 0.05em;
+      transition: 0.5s;
+  }
+  .inputBox input:valid ~ span,
+  .inputBox input:focus ~ span {
+      color: var(--kolor5);
+      transform: translateX(0px) translateY(-34px);
+      font-size: 0.75em;
+  }
+  .inputBox i {
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 100%;
+      height: 2px;
+      background: var(--kolor4);
+      border-radius: 4px;
+      overflow: hidden;
+      transition: 0.5s;
+      pointer-events: none;
+      z-index: 9;
+  }
+  .inputBox input:valid ~ i,
+  .inputBox input:focus ~ i {
+      height: 44px;
+  }
+.links {
+  display: flex;
+  justify-content: flex-end;
+  cursor: pointer;
+}
+  .links h4 {
+      margin: 10px 0;
+      font-size: 0.75em;
+      color: var(--kolor4);
+      text-decoration: beige;
+      transition: 0.2s;
+  }
+
+      .links h4:hover {
+          color: #8f8f8f;
+      }
+input[type="submit"] {
+  border: none;
+  outline: none;
+  padding: 11px 0px 11px 0px;
+  background: var(--kolor4);
+  cursor: pointer;
+  border-radius: 4px;
+  font-weight: 600;
+  width: 100px;
+  margin-top: 10px;
+  transition: 0.3s;
+}
+input[type="submit"]:hover{
+  background: var(--kolor5);
+}
+  input[type="submit"]:active {
+      opacity: 0.8;
+  }
+
+  @keyframes cv {
+    0%{
+      opacity: 0;
+      margin-top: 100px;
+    }
+    100%{
+      opacity: 1;
+      margin-top: 0px;
+    }
+  }
+.mapa{
+  border-radius: 15px;
+  position: absolute;
+  left: 5%;
+  top: 16%;
+  transition: 0.3s;
+  animation: cv 1s;
+}
+.opis{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  color: var(--kolor4);  
+  position: absolute;
+  width: 550px;
+  text-align: center;
+  font-weight: 500;
+  top: 25%;
+  right: 6%;
+  animation: cv 1s;
+  transition: 0.3s;
+}
+.opis-tytul hr{
+  border: var(--kolor2) 2px solid;
+  margin-top: 0;
+  width: 100%;
+  border-radius: 5px;
+}
+.opis-tytul{
+  font-size: 25px;
+  font-weight: 600;
+  color: var(--kolor5);
+}
+.opis-opis u{
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 25px;
+  color: var(--kolor5);
+}
+.opis-opis i{
+  color: var(--kolor5);
+}
+.yt{
+  position: absolute;
+  top: 65%;
+  left: 5%;
+  border-radius: 15px;
+  animation: cv 1s;
+}
