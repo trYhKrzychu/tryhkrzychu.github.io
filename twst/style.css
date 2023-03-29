@@ -385,7 +385,6 @@ body nav .indicator {
   animation: text-poj 1s;
 }
 .contact{
-  margin-top: 440px;
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -462,6 +461,7 @@ body nav .indicator {
   scale: 1.05;
 }
 .everything-photo{
+  margin-top: 700px;
   padding-top: 50px;
 }
 .everything-photo-right{
