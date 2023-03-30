@@ -186,9 +186,7 @@ body nav .indicator {
   background-size: cover;
   animation: tlo 2s;
 }
-.everything-footage-2{
-  height: 1000px;
-}
+
 .everything-footage-button{
   display: flex;
   justify-content: center;
@@ -297,6 +295,7 @@ body nav .indicator {
   justify-content: center;
   align-items: center;
   flex-direction: row;
+  flex-wrap: wrap;
   width: 100%;
 }
 .services-opinion hr, .everything-footage-2-about-title hr, .everything-tekst hr{
@@ -782,7 +781,7 @@ body nav .indicator {
   }
 }
 
-@media  (max-width: 600px) {
+@media  (max-width: 1000px) {
   .back{display: none;}
   body nav{display: none;}
   #big-logo{width: 60%;}
@@ -790,9 +789,34 @@ body nav .indicator {
   .everything-footage-title h1{font-size: 40px;}
   .everything-footage-title-typing{font-size: 25px;}
   .everything-footage-button{scale: 0.75;}
-  .services-opinion-title{font-size: 25px;margin-top: 50px;}
-  .services-opinion-description{font-size: 15px; font-weight: 500; width: 60%;}
-  .services-opinion-card-cards{flex-direction: column; flex-wrap: wrap; background-color: orange;}
+  .services-opinion-title, .everything-footage-2-about-title{font-size: 25px;}
+  .services-opinion-description, .everything-footage-2-about-des{font-size: 15px; font-weight: 500; width: 60%;}
   .services-opinion-card{width: 45%;}
-  .services-opinion{height: 1500px;}
+  .services-opinion-card:nth-of-type(3){display: none;}
+  .services-opinion-card:nth-of-type(4){display: none;}
+  .services-opinion-card:nth-of-type(5){display: none;}
+  .everything-photo-right{display: none;}
+  .everything-photo-left{width: 100%;}
+  .everything-footage-2{margin-top: 335px;}
+  .everything-footage-2-about-card-cards{flex-direction: column; height: 750px; margin-top: 50px;}
+  .everything-footage-2-about-card{width: 75%; height: 250px;  box-shadow: none ;}
+  .everything-footage-2-about-card:hover .everything-footage-2-about-card-text{top: 0; height: 100%; background-color: var(--kolor2-tlo);}
+  .everything-footage-2-about-card-text p{font-size: 13px;}
+  .everything-footage-2-about-card-text{font-size:18px; text-align: center; top: 70%;height: 70px; display: flex; justify-content: center; align-items: center; flex-direction: column;}
+  .contact form{width: 55%;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 }
