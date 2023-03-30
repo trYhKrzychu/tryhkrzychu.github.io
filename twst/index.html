@@ -14,6 +14,23 @@
   <body>
     <div id="loading"></div>
     <div class="back"><i class="icon-up-big"></i></div>
+    
+    <section id="mobile">
+      <div class="mobile-button"><ion-icon name="menu-outline"></ion-icon>
+        <div class="stronki">
+          <a href="index/about/about.html"><div class="mobile-button-action">O nas</div></a>
+          <a href="index/gallery/gallery.html"><div class="mobile-button-action">Galeria</div></a>
+          <a href="index/services/services.html"><div class="mobile-button-action">Usługi</div></a>
+          <a href="index/contact/contact.html"><div class="mobile-button-action">Kontakt</div></a>
+        </div>
+        <div class="media">
+          <a href="https://www.facebook.com/profile.php?id=100029462384763" ><ion-icon name="logo-facebook" class="logo-icon-fb"></ion-icon></a>
+          <a href="https://discordapp.com/users/669238832088088578"><ion-icon name="logo-discord" class="logo-icon-dc"></ion-icon></a>
+          <a href="https://www.instagram.com/th_krzk/?next=%2F"><ion-icon name="logo-instagram" class="logo-icon-ig"></ion-icon></a>
+        </div>
+      </div>
+    </section>
+
     <nav>
       <ul class="logo">
         <li class="logo-icon">
@@ -290,6 +307,40 @@
       $(".everything-footage-button").click(function(){$(document).scrollTop(1000)});
       $(".back").click(function(){$(document).scrollTop(0)});
       $(".back").click(function(){$(".services-opinion-card").css("animation", "about-poj 1s")});
+
+
+      $(document).on("click", ".mobile-button", function() {
+      $(".mobile-button-action").css("display", "block");
+      $(".mobile-button ion-icon").css("display", "none");
+      $(".media ion-icon").css("display", "flex");
+      $(".media").css("display", "flex");
+      $(".mobile-button").css("height", "100vh");
+      });
+
+      $(document).on("click", ".everything", function() {
+      $("ion-icon").css("display", "block");
+      setTimeout(function() {
+     $(".mobile-button-action").css("display", "none");
+     $(".mobile-button").css("height", "50px");
+     $(".media").css("display", "none");
+      }, 500);
+      });
+
+      $(".mobile-button").click(function() {
+      $("#mobile").css("animation", "menu 0.5s").one("animationend", function() {
+      $(this).css("animation", "");
+      });
+       });
+
+       $(".everything").click(function() {
+      $("#mobile").css("animation", "menu-reverse 0.5s").one("animationend", function() {
+      $(this).css("animation", "");
+      });
+       });
+
+
+
+
     </script>
 </body>
 </html>
