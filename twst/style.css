@@ -850,6 +850,11 @@ body nav .indicator {
 @media  (max-width: 1919px) {
   body nav{display: none;}
   #big-logo{width: 20%;}
+  .services-opinion-card-description{display: none;}
+  .services-opinion-card{flex-direction: column; width: 200px; height: 200px;}
+  .services-opinion-card-name{top: 60%;left: 38%;}
+  .services-opinion-card-ratings{top: 70%;left: 18%;}
+  .services-opinion-card-photo img{top: 10%;left: 28%;}
 }
 @media  (max-width: 1000px) {
   .back{display: none;}
