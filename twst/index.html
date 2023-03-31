@@ -317,18 +317,10 @@
       $(".powrot").css("display", "flex");
       $(".media ion-icon").css("display", "flex");
       $(".media").css("display", "flex");
-
-      function setMobileHeight() {
-        var windowHeight = $(window).height();
-        $("#mobile").height(windowHeight);
-      }
-
-      $(window).on("resize", setMobileHeight);
-      setMobileHeight();
-
       $(".mobile-button").css("height", "-webkit-fill-available;");
-      $("#mobile").css("border-radius", "0px");
+      $("#mobile").css("border-radius", "0px 0px 10px 0px");
       $("#mobile").css("top", "0");
+      $("#mobile").css("height", "400px");
       });
 
       $(document).on("click", ".powrot", function() {
@@ -340,9 +332,6 @@
       $("#mobile").css("border-radius", "0px 10px 10px 0px");
       $("#mobile").css("top", "50px");
       $("#mobile").css("height", "50px");
-      
-
-      $(window).off("resize", setMobileHeight);
       });
 
 
