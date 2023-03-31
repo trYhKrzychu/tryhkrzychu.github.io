@@ -847,7 +847,10 @@ body nav .indicator {
     background-position: center;
   }
 }
-
+@media  (max-width: 1919px) {
+  body nav{display: none;}
+  #big-logo{width: 20%;}
+}
 @media  (max-width: 1000px) {
   .back{display: none;}
   body nav{display: none;}
