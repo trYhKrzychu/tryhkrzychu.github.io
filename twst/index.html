@@ -16,8 +16,9 @@
     <div class="back"><i class="icon-up-big"></i></div>
     
     <section id="mobile">
-      <div class="mobile-button"><ion-icon name="menu-outline"></ion-icon>
+      <div class="mobile-button"><ion-icon name="menu-outline" id="kreski"></ion-icon>
         <div class="stronki">
+          <ion-icon name="close-outline" class="powrot"></ion-icon>
           <a href="index/about/about.html"><div class="mobile-button-action">O nas</div></a>
           <a href="index/gallery/gallery.html"><div class="mobile-button-action">Galeria</div></a>
           <a href="index/services/services.html"><div class="mobile-button-action">Usługi</div></a>
@@ -309,31 +310,29 @@
       $(".back").click(function(){$(".services-opinion-card").css("animation", "about-poj 1s")});
 
 
-      $(document).on("click", ".mobile-button", function() {
-      $(".mobile-button-action").css("display", "block");
-      $(".mobile-button ion-icon").css("display", "none");
+      $(document).on("click", "#kreski", function() {
+      $(".mobile-button-action").css("display", "flex");
+      $("#kreski").css("display", "none");
+      $(".powrot").css("display", "flex");
       $(".media ion-icon").css("display", "flex");
       $(".media").css("display", "flex");
       $(".mobile-button").css("height", "100vh");
+      $("#mobile").css("border-radius", "0px");
+      $("#mobile").css("top", "0");
+      });
+      $(document).on("click", ".powrot", function() {
+      $(".mobile-button-action").css("display", "none");
+      $(".powrot").css("display", "none");
+      $("#kreski").css("display", "block");
+      $(".mobile-button").css("height", "50px");
+      $(".media").css("display", "none");
+      $("#mobile").css("border-radius", "0px 10px 10px 0px");
+      $("#mobile").css("top", "50px");
       });
 
-      $(document).on("click", ".everything", function() {
-      $("ion-icon").css("display", "block");
-      setTimeout(function() {
-     $(".mobile-button-action").css("display", "none");
-     $(".mobile-button").css("height", "50px");
-     $(".media").css("display", "none");
-      }, 500);
-      });
 
-      $(".mobile-button").click(function() {
+      $("#kreski").click(function() {
       $("#mobile").css("animation", "menu 0.5s").one("animationend", function() {
-      $(this).css("animation", "");
-      });
-       });
-
-       $(".everything").click(function() {
-      $("#mobile").css("animation", "menu-reverse 0.5s").one("animationend", function() {
       $(this).css("animation", "");
       });
        });

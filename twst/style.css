@@ -701,12 +701,12 @@ body nav .indicator {
   position: fixed;
   min-width: 50px;
   max-width: 150px;
-  background-color: pink;
-  top: 0;
+  background-color: var(--kolor5);
+  top: 50px;
   left: 0;
   border-radius: 0px 10px 10px 0px;
   z-index: 99998;
-  display: none;
+  display: flex;
 }
 .mobile-button ion-icon{
   font-size: 50px;
@@ -727,14 +727,24 @@ body nav .indicator {
   text-align: center;
   position: relative;
 }
+.powrot{
+  display: none;
+  text-align: right;
+  width: 150px;
+}
 .mobile-button-action{
   display: none;
   width: 150px;
   height: 50px;
-  border: 2px solid black;
   text-align: center;
   justify-content: center;
   align-items: center;
+  transition: 0.3s;
+  font-size: 20px;
+  font-weight: 600;
+}
+.mobile-button-action:hover{
+  background-color: var(--kolor3);
 }
 .media{
   display: none;
@@ -745,6 +755,22 @@ body nav .indicator {
   flex-direction: row;
   text-align: center;
 }
+.stronki ion-icon{
+  margin-bottom: 40px;
+  font-size: 40px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
 @keyframes menu {
   0%{
     left: -150px;
@@ -753,38 +779,6 @@ body nav .indicator {
     left: 0;
   }
 }
-@keyframes menu-reverse {
-  0%{
-    left: 0;
-  }
-  100%{
-    left: -150px;
-  }
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 @keyframes gallery-slide {
   0% {
     left: 0;
