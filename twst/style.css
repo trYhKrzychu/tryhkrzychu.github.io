@@ -701,6 +701,7 @@ body nav .indicator {
   position: fixed;
   min-width: 50px;
   max-width: 150px;
+  height: 50px;
   background-color: var(--kolor5);
   top: 50px;
   left: 0;

@@ -310,17 +310,27 @@
       $(".back").click(function(){$(".services-opinion-card").css("animation", "about-poj 1s")});
 
 
+
       $(document).on("click", "#kreski", function() {
       $(".mobile-button-action").css("display", "flex");
       $("#kreski").css("display", "none");
       $(".powrot").css("display", "flex");
       $(".media ion-icon").css("display", "flex");
       $(".media").css("display", "flex");
-      $(".mobile-button").css("min-height", "100vh");
+
+      function setMobileHeight() {
+        var windowHeight = $(window).height();
+        $("#mobile").height(windowHeight);
+      }
+
+      $(window).on("resize", setMobileHeight);
+      setMobileHeight();
+
       $(".mobile-button").css("height", "-webkit-fill-available;");
       $("#mobile").css("border-radius", "0px");
       $("#mobile").css("top", "0");
       });
+
       $(document).on("click", ".powrot", function() {
       $(".mobile-button-action").css("display", "none");
       $(".powrot").css("display", "none");
@@ -329,14 +339,20 @@
       $(".media").css("display", "none");
       $("#mobile").css("border-radius", "0px 10px 10px 0px");
       $("#mobile").css("top", "50px");
+      $("#mobile").css("height", "50px");
+      
+
+      $(window).off("resize", setMobileHeight);
       });
+
 
 
       $("#kreski").click(function() {
       $("#mobile").css("animation", "menu 0.5s").one("animationend", function() {
       $(this).css("animation", "");
       });
-       });
+      });
+
 
 
 
