@@ -223,6 +223,7 @@ body nav .indicator {
 }
 .everything-footage-title-typing{
   height: 20px;
+  text-align: center;
 }
 .everything-description{
   background-color: var(--kolor3);
