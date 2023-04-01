@@ -467,7 +467,7 @@ body nav .indicator {
   scale: 1.05;
 }
 .everything-photo{
-  margin-top: 500px;
+  margin-top: 700px;
   padding-top: 50px;
 }
 .everything-photo-right{
@@ -852,7 +852,8 @@ body nav .indicator {
     background-position: center;
   }
 }
-@media  (max-width: 1919px) {
+@media  (max-width: 1900px) {
+  .everything-footage-button{display: none;}
   #mobile{display: flex;}
   body nav{display: none;}
   #big-logo{width: 20%;}
@@ -864,14 +865,15 @@ body nav .indicator {
   .services-opinion-card:hover{margin-top: 10px;}
   .services-opinion{min-height: 400px;}
   .services-opinion-card-cards{margin-top: 20px;}
-  .everything-footage-2-about{margin-top: 1250px;}
+  .everything-footage-2-about{margin-top: 1250px; background-color: var(--kolor3);}
   .everything-tekst{display: none;}
   .everything-photo-left-slider{display: none;}
   .everything-photo-left-info{width: 75%; height: 250px;  box-shadow: none ;}
   .everything-footage-2-about-card-cards{flex-direction: column; height: 750px; margin-top: 50px;}
   .everything-photo-left-info:hover .everything-footage-2-about-card-text{top: 0; height: 100%; background-color: var(--kolor2-tlo);}
+  .everything-footage-2-about-card:hover .everything-footage-2-about-card-text{top: 0; height: 100%; background-color: var(--kolor2-tlo);}
   .everything-footage-2-about-card-text p{font-size: 13px;}
-  .everything-footage-2-about-card-text{font-size:18px; text-align: center; top: 70%;height: 70px; display: flex; justify-content: center; align-items: center; flex-direction: column;}
+  .everything-footage-2-about-card-text{font-size:18px; text-align: center; top: 75%;height: 70px; display: flex; justify-content: center; align-items: center; flex-direction: column;}
   .everything-photo{margin-top: 750px;}
   .everything-photo-right{display: none;}
   .everything-photo-left{width: 100%;}
@@ -883,17 +885,15 @@ body nav .indicator {
   body nav{display: none;}
   #big-logo{width: 60%;}
   .everything-footage, .everything-footage-2{height: 340px;}
-  .everything-footage-title h1{font-size: 40px;}
-  .everything-footage-title-typing{font-size: 25px;}
+  .everything-footage-title h1{font-size: 55px;}
+  .everything-footage-title-typing{font-size: 35px;}
   .everything-footage-button{scale: 0.75;}
   .services-opinion-title, .everything-footage-2-about-title{font-size: 25px;}
   .services-opinion-description, .everything-footage-2-about-des{font-size: 15px; font-weight: 500; width: 60%;}
   .services-opinion-card:nth-of-type(3){display: none;}
   .services-opinion-card:nth-of-type(4){display: none;}
   .services-opinion-card:nth-of-type(5){display: none;}
-  .everything-footage-2-about-card-cards{flex-direction: column; height: 750px; margin-top: 50px;}
-  .everything-footage-2-about-card{width: 75%; height: 250px;  box-shadow: none ;}
-  .everything-footage-2-about-card:hover .everything-footage-2-about-card-text{top: 0; height: 100%; background-color: var(--kolor2-tlo);}
+
   .contact form{width: 350px; background-size: 150px;}
   .everything-tekst{height: 300px; padding: 100px 0px 50px 0px;}
 }

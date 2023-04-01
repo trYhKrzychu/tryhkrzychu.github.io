@@ -266,6 +266,11 @@
     </script>
     <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
     <script>
+      $(window).on('resize', function() {
+  var windowWidth = $(window).width();
+  console.log('Szerokość ' + windowWidth + 'px');
+});
+
       var typed = new Typed('.everything-footage-title-typing',{
         strings : ["korepetytorów w Krakowie", "darmowy dojazd", "gwarancję zdawalności", "niskie ceny", "wycieczki po Europie"],
         loop : true,
@@ -273,9 +278,12 @@
         backSpeed : 80,
         showCursor: false,
       });
-      
-    $(document).ready(function(){
-    $(window).scroll(function(){
+      $(window).on('load resize', function() {
+  if ($(window).width() < 1900) {
+    return;
+  }
+      $(document).ready(function(){
+      $(window).scroll(function(){
         var scroll = $(window).scrollTop();
         if (scroll > 80) {
         $(".back").css("right" , "0.5%");
@@ -301,13 +309,12 @@
         }
         })
       })
-   
+      });
+
+    
       $(".everything-footage-button").click(function(){$(document).scrollTop(1000)});
       $(".back").click(function(){$(document).scrollTop(0)});
       $(".back").click(function(){$(".services-opinion-card").css("animation", "about-poj 1s")});
-
-
-
       $(document).on("click", "#kreski", function() {
       $(".mobile-button-action").css("display", "flex");
       $("#kreski").css("display", "none");
@@ -320,7 +327,6 @@
       $("#mobile").css("height", "400px");
       $("#mobile-menu-bg").css("display", "block");
       });
-
       $(document).on("click", ".powrot", function() {
       $(".mobile-button-action").css("display", "none");
       $(".powrot").css("display", "none");
@@ -332,9 +338,6 @@
       $("#mobile").css("height", "50px");
       $("#mobile-menu-bg").css("display", "none");
       });
-
-
-
       $("#kreski").click(function() {
       $("#mobile").css("animation", "menu 0.5s").one("animationend", function() {
       $(this).css("animation", "");
@@ -342,9 +345,6 @@
       });
 
 
-
-
-
-    </script>
+     </script>
 </body>
 </html>
