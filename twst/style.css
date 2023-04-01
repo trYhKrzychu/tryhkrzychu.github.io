@@ -869,6 +869,7 @@ body nav .indicator {
   .everything-tekst{display: none;}
   .everything-photo-left-slider{display: none;}
   .everything-photo-left-info{width: 75%; height: 250px;  box-shadow: none ;}
+  .everything-footage-2-about-card{width: 75%; height: 250px;  box-shadow: none ;}
   .everything-footage-2-about-card-cards{flex-direction: column; height: 750px; margin-top: 50px;}
   .everything-photo-left-info:hover .everything-footage-2-about-card-text{top: 0; height: 100%; background-color: var(--kolor2-tlo);}
   .everything-footage-2-about-card:hover .everything-footage-2-about-card-text{top: 0; height: 100%; background-color: var(--kolor2-tlo);}
