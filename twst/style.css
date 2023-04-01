@@ -249,7 +249,7 @@ body nav .indicator {
   flex-direction: column;
   text-align: center;
   width: 100%;
-  height: 500px;
+  min-height: 500px;
   background-color: var(--kolor4);
 }
 .services-opinion-card{
@@ -335,6 +335,7 @@ body nav .indicator {
   position: relative;
   width: 100%;
   height: 400px;
+  transition: 0.3s;
 }
 .everything-footage-2-about-title{color: white;}
 .everything-footage-2-about-card{
@@ -396,6 +397,7 @@ body nav .indicator {
   height: 250px;
   background-color: var(--kolor3);
   z-index: 99;
+  transition: 0.3s;
 }
 .contact form{
   display: flex;
@@ -407,6 +409,7 @@ body nav .indicator {
   background-position: right;
   background-repeat: no-repeat;
   background-size: 200px;
+  transition: 0.3s;
 }
 #contact-title{
   font-size: 30px;
@@ -430,6 +433,7 @@ body nav .indicator {
   border-bottom: 4px var(--kolor2) solid;
   margin-bottom: 20px;
   margin-top: 20px;
+  transition: 0.3s;
 }
 #contact-form-email::placeholder{
   color: white;
@@ -617,12 +621,13 @@ body nav .indicator {
 }
 .stopka{
   width: 100%;
-  height: 150px;
+  max-height: 150px;
   background-color: var(--kolor2);
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  text-align: center;
   padding: 20px 20px 40px 20px;
 }
 .przyciski{
@@ -707,7 +712,7 @@ body nav .indicator {
   left: 0;
   border-radius: 0px 10px 10px 0px;
   z-index: 99998;
-  display: flex;
+  display: none;
   color: white;
 }
 .mobile-button ion-icon{
@@ -848,13 +853,30 @@ body nav .indicator {
   }
 }
 @media  (max-width: 1919px) {
+  #mobile{display: flex;}
   body nav{display: none;}
   #big-logo{width: 20%;}
   .services-opinion-card-description{display: none;}
-  .services-opinion-card{flex-direction: column; width: 200px; height: 200px;}
-  .services-opinion-card-name{top: 60%;left: 38%;}
-  .services-opinion-card-ratings{top: 70%;left: 18%;}
-  .services-opinion-card-photo img{top: 10%;left: 28%;}
+  .services-opinion-card-photo img{position: static;}
+  .services-opinion-card-name{position: static;}
+  .services-opinion-card-ratings{position: static;}
+  .services-opinion-card{width: 200px; height: 175px;}
+  .services-opinion-card:hover{margin-top: 10px;}
+  .services-opinion{min-height: 400px;}
+  .services-opinion-card-cards{margin-top: 20px;}
+  .everything-footage-2-about{margin-top: 1250px;}
+  .everything-tekst{display: none;}
+  .everything-photo-left-slider{display: none;}
+  .everything-photo-left-info{width: 75%; height: 250px;  box-shadow: none ;}
+  .everything-footage-2-about-card-cards{flex-direction: column; height: 750px; margin-top: 50px;}
+  .everything-photo-left-info:hover .everything-footage-2-about-card-text{top: 0; height: 100%; background-color: var(--kolor2-tlo);}
+  .everything-footage-2-about-card-text p{font-size: 13px;}
+  .everything-footage-2-about-card-text{font-size:18px; text-align: center; top: 70%;height: 70px; display: flex; justify-content: center; align-items: center; flex-direction: column;}
+  .everything-photo{margin-top: 750px;}
+  .everything-photo-right{display: none;}
+  .everything-photo-left{width: 100%;}
+  .przyciski{display: none;}
+  .stopka{margin-top: 400px;}
 }
 @media  (max-width: 1000px) {
   .back{display: none;}
@@ -866,33 +888,17 @@ body nav .indicator {
   .everything-footage-button{scale: 0.75;}
   .services-opinion-title, .everything-footage-2-about-title{font-size: 25px;}
   .services-opinion-description, .everything-footage-2-about-des{font-size: 15px; font-weight: 500; width: 60%;}
-  .services-opinion-card{width: 45%;}
   .services-opinion-card:nth-of-type(3){display: none;}
   .services-opinion-card:nth-of-type(4){display: none;}
   .services-opinion-card:nth-of-type(5){display: none;}
-  .everything-photo-right{display: none;}
-  .everything-photo-left{width: 100%;}
-  .everything-footage-2{margin-top: 335px;}
   .everything-footage-2-about-card-cards{flex-direction: column; height: 750px; margin-top: 50px;}
   .everything-footage-2-about-card{width: 75%; height: 250px;  box-shadow: none ;}
   .everything-footage-2-about-card:hover .everything-footage-2-about-card-text{top: 0; height: 100%; background-color: var(--kolor2-tlo);}
-  .everything-footage-2-about-card-text p{font-size: 13px;}
-  .everything-footage-2-about-card-text{font-size:18px; text-align: center; top: 70%;height: 70px; display: flex; justify-content: center; align-items: center; flex-direction: column;}
   .contact form{width: 350px; background-size: 150px;}
   .everything-tekst{height: 300px; padding: 100px 0px 50px 0px;}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+}
+@media  (max-width: 400px){
+  .contact form{background: none;align-items: center;}
+  .contact button{align-self: center;}
+  #contact-form-email{width:75%;}
 }
