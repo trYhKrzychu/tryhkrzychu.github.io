@@ -218,8 +218,8 @@ body nav .indicator {
 }  
 .box {
   position: absolute;
-  left: 40%;
-  top: 150px;
+  justify-self: center;
+  align-self: center;
   width: 380px;
   height: 850px;
   background: #1c1c1c;
@@ -227,32 +227,9 @@ body nav .indicator {
   overflow: hidden;
   transition: 0.2s;
   animation: cv 1s;
+  right: calc(50% - 165px);
+  top: 150px;
 }
-  .box::before {
-      content: '';
-      z-index: 1;
-      position: absolute;
-      top: -50%;
-      left: -50%;
-      width: 380px;
-      height: 850px;
-      transform-origin: bottom right;
-      background: linear-gradient(0deg,transparent,var(--kolor1),var(--kolor1));
-      animation: animate 6s linear infinite;
-  }
-  .box::after {
-      content: '';
-      z-index: 1;
-      position: absolute;
-      top: -50%;
-      left: -50%;
-      width: 380px;
-      height: 850px;
-      transform-origin: bottom right;
-      background: linear-gradient(0deg,transparent,var(--kolor1),var(--kolor1));
-      animation: animate 6s linear infinite;
-      animation-delay: -3s;
-  }
 form {
   position: absolute;
   inset: 2px;
@@ -278,7 +255,7 @@ h2 {
 }
   .inputBox input {
       position: relative;
-      width: 100%;
+      width: 50%;
       padding: 20px 10px 10px;
       background: transparent;
       outline: none;
@@ -525,9 +502,13 @@ input[type="submit"]:hover{
   .mapa{display: none;}
   .yt{display: none;}
   .przyciski{display: none;}
-  .stopka{margin-top: 900px;}
-  .box{position: static;}
+  .stopka{bottom: 0;  position: absolute;}
+  .box{top:0; justify-self: center; align-self: center; margin-left: auto; margin-right: auto;}
+  body{display: flex;}
 }
 @media (max-width: 1000px) {
   .back{display: none;}
+}
+@media (max-width: 400px){
+  .box{scale: 0.9;}
 }
