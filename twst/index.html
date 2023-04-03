@@ -345,6 +345,16 @@
       });
 
 
+      var userAgent = navigator.userAgent;
+
+      if (userAgent.indexOf('Safari') != -1 && userAgent.indexOf('Chrome') == -1) {
+        $(".everything-footage").css("background-attachment","scroll");
+        $(".everything-footage-2").css("background-attachment","scroll");
+      } else {
+      }
+
+
+
      </script>
 </body>
 </html>
