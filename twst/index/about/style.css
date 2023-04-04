@@ -169,6 +169,7 @@ body nav .indicator {
   flex-direction: column;
   color: white;
   letter-spacing: 2px;
+  position: absolute;
 }
 .buttons a{
   text-decoration: none;
@@ -475,11 +476,6 @@ input[type="submit"]:hover{
   }
 }
 
-
-
-@media (min-height: 31.25em){
-  .end{margin-top: 200px;}
-}
 
 @media  (max-width: 1900px) {
   #mobile{display: flex;}
