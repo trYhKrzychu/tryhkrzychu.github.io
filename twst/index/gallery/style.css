@@ -480,8 +480,6 @@ body nav .indicator {
   flex-direction: column;
   color: white;
   letter-spacing: 2px;
-  position: absolute;
-  bottom: 0;
 }
 .buttons a{
   text-decoration: none;
@@ -563,7 +561,7 @@ body nav .indicator {
   .everything-footage-2-about-card-text{font-size:18px; text-align: center; top: 75%;height: 70px; display: flex; justify-content: center; align-items: center; flex-direction: column;}
   .everything-photo-left{width: 100%; flex-wrap: wrap;}
   .buttons{display: none;}
-  .end{height: 80px;}
+  .end{height: 80px; display: none;}
   .glowne-prawo{display: none;}
   .glowne{margin: 0px;}
 }
