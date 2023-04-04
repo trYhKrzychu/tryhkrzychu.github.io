@@ -20,6 +20,7 @@ html, body {
   scroll-behavior: smooth;
   user-select: none;
 }
+
 #loading{
   background: var(--kolor1) url("../../photos/web/preloading.gif") no-repeat center center;
   background-size: 5%;
@@ -476,7 +477,9 @@ input[type="submit"]:hover{
 
 
 
-
+@media (min-height: 31.25em){
+  .end{margin-top: 200px;}
+}
 
 @media  (max-width: 1900px) {
   #mobile{display: flex;}
@@ -485,7 +488,7 @@ input[type="submit"]:hover{
   .you{display: none;}
   .buttons{display: none;}
   .box{top:0;}
-  .end{margin-bottom: 0; height: 80px;}
+  .end{ height: 80px;}
 }
 @media (max-width: 1000px) {
   .back{display: none;}
