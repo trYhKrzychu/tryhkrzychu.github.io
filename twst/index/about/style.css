@@ -485,6 +485,7 @@ input[type="submit"]:hover{
   .you{display: none;}
   .buttons{display: none;}
   .box{top:0;}
+  .end{margin-bottom: 0; height: 80px;}
 }
 @media (max-width: 1000px) {
   .back{display: none;}
