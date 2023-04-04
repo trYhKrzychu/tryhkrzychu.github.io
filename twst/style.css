@@ -171,6 +171,7 @@ body nav .indicator {
 #big-logo:hover{
   scale: 1.05;
 }
+
 .everything-footage, .everything-footage-2{
   display: flex;
   justify-content: center;
@@ -186,7 +187,6 @@ body nav .indicator {
   background-size: cover;
   animation: tlo 2s;
 }
-
 .everything-footage-button{
   display: flex;
   justify-content: center;
@@ -908,4 +908,5 @@ body nav .indicator {
   .contact form{background: none;align-items: center;}
   .contact button{align-self: center;}
   #contact-form-email{width:75%;}
+  
 }
