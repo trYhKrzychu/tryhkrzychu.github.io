@@ -740,11 +740,12 @@ body nav .indicator {
   text-decoration: none;
   color: inherit;
   cursor: pointer;
+  margin: 0px 20px 0px 20px ;
 }
 .buttons{
   width: 30%;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   flex-direction: row;
   text-align: center;
@@ -854,8 +855,8 @@ body nav .indicator {
   .everything-photo{margin-top: 750px;}
   .everything-photo-right{display: none;}
   .everything-photo-left{width: 100%;}
-  .przyciski{display: none;}
-  .stopka{margin-top: 400px;}
+  .buttons{display: none;}
+  .end{margin-top: 400px; height: 80px;}
 }
 @media  (max-width: 1000px) {
   .back{display: none;}
