@@ -17,7 +17,6 @@
 }
 
 html, body {
-  min-height: 100vh;
   background: var(--kolor1);
   scroll-behavior: smooth;
   user-select: none;
@@ -273,13 +272,18 @@ body nav .indicator {
   margin-top: -50px;
   scale: 1.05;
 }
-.pieniadze-oplacalnosc-tekst{
+.pieniadze-oplacalnosc-tekst, .pieniadze-oplacalnosc-tekst-2{
   width: 55%;
   height: 350px;
   font-size: 20px;
   padding: 40px;
   font-size: 21px;
   text-align: center;
+}
+.pieniadze-oplacalnosc-tekst-2{
+  display: none;
+  width: 100%;
+  font-size: 13px;
 }
 @keyframes imiona {
   0%{
@@ -356,5 +360,186 @@ body nav .indicator {
   100%{
     opacity: 1;
     margin-top: 0px;
+  }
+}
+
+#mobile{
+  position: fixed;
+  min-width: 50px;
+  max-width: 150px;
+  height: 50px;
+  background-color: var(--kolor5);
+  top: 300px;
+  left: 0;
+  border-radius: 0px 10px 10px 0px;
+  z-index: 99998;
+  display: none;
+  color: white;
+}
+.mobile-button ion-icon{
+  font-size: 50px;
+  color: white;
+}
+.media ion-icon{
+  font-size: 25px;
+}
+.mobile-button a{
+  text-decoration: none;
+  color: inherit;
+}
+.mobile-button{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  position: relative;
+}
+.powrot{
+  display: none;
+  text-align: right;
+  width: 150px;
+}
+.mobile-button-action{
+  display: none;
+  width: 150px;
+  height: 50px;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  transition: 0.3s;
+  font-size: 20px;
+  font-weight: 600;
+}
+.mobile-button-action:hover{
+  background-color: var(--kolor3);
+}
+.media{
+  display: none;
+  width: 150px;
+  height: 50px;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: row;
+  text-align: center;
+}
+.stronki ion-icon{
+  margin-bottom: 40px;
+  font-size: 40px;
+}
+
+#mobile-menu-bg {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: 999;
+  transition: 0.3s;
+  animation: text-poj 0.5s;
+}
+
+.end{
+  width: 100%;
+  height: 120px;
+  background-color: var(--kolor2);
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+  color: white;
+  letter-spacing: 2px;
+}
+.buttons a{
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+  margin: 0px 20px 0px 20px ;
+}
+.buttons{
+  width: 30%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  text-align: center;
+}
+.copy{
+  width: 50%;
+  text-align: center;
+  font-weight: 600;
+}
+#href:hover{
+  text-decoration: underline 1.5px; 
+}
+@media  (max-width: 1900px) {
+  #mobile{display: flex;}
+  body nav{display: none;}
+  .buttons{display: none;}
+  .end{ height: 80px;}
+  .pieniadze-pakiety{flex-direction: column;}
+  .pieniadze-pakiety-karty{width: 85%; margin: 20px 0px 20px 0px; animation: none;}
+  .pieniadze-pakiety-karty-tytul{font-size: 22px;}
+  .pieniadze-pakiety-karty-zalety{font-size: 17px;}
+  .pieniadze-pakiety-karty-cena{font-size: 22px;}
+  .pieniadze-oplacalnosc-zdjecia{display: none;}
+  .pieniadze-oplacalnosc-tekst{display: none;}
+  .pieniadze-oplacalnosc-tekst-2{display: flex; font-size: 20px;}
+}
+@media (max-width:750px;){
+  .pieniadze-oplacalnosc-tekst-2{display: flex; font-size: 15px;}
+}
+@media (max-width:500px;){
+  .pieniadze-oplacalnosc-tekst-2{display: flex; font-size: 15px;}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@keyframes text-poj {
+  0%{
+    display: none;
+    opacity: 0;
+  }
+  100%{
+    display: block;
+    opacity: 1;
+  }
+}
+@keyframes menu {
+  0%{
+    left: -150px;
+  }
+  100%{
+    left: 0;
   }
 }
