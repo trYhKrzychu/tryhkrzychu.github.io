@@ -24,7 +24,7 @@ body{
   min-height: 100vh;
 }
 #loading{
-  background: var(--kolor1) url("photos/web/preloading.gif") no-repeat center center;
+  background: var(--kolor1) url("../../photos/web/preloading.gif") no-repeat center center;
   background-size: 5%;
   z-index: 99999;
   width: 100%;
