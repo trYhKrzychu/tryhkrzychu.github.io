@@ -256,6 +256,7 @@ body nav .indicator {
   justify-content: center;
   align-items: center;
   animation: cv 1s;
+  transition: 0.3s;
 }
 .zdjecia-klasa h1{
   display: none;
@@ -279,11 +280,6 @@ body nav .indicator {
   padding: 40px;
   font-size: 21px;
   text-align: center;
-}
-.pieniadze-oplacalnosc-tekst-2{
-  display: none;
-  width: 100%;
-  font-size: 13px;
 }
 @keyframes imiona {
   0%{
@@ -337,21 +333,6 @@ body nav .indicator {
   font-weight: 600;
   margin-top: 30px;
 }
-.pieniadze-pakiety-karty:hover .icon-ok-circled{
-  color: var(--kolor6);
-}
-.pieniadze-pakiety-karty:hover u{
-  color: var(--kolor6);
-  font-size: 40px;
-}
-.pieniadze-pakiety-karty:hover .pieniadze-pakiety-karty-tytul{
-  color: var(--kolor6);
-  font-size: 40px;
-}
-.pieniadze-pakiety-karty:hover {
-  width: 35%;
-}
-
 @keyframes cv {
   0%{
     opacity: 0;
@@ -481,24 +462,47 @@ body nav .indicator {
   .end{ height: 80px;}
   .pieniadze-pakiety{flex-direction: column;}
   .pieniadze-pakiety-karty{width: 85%; margin: 20px 0px 20px 0px; animation: none;}
+  .pieniadze-oplacalnosc-zdjecia{display: flex; justify-content: space-around; width: 60%;}
+  .pieniadze-oplacalnosc-tekst{display: none;}
+}
+@media (min-width: 1900px) {
+  .pieniadze-pakiety-karty:hover .icon-ok-circled{
+    color: var(--kolor6);
+  }
+  .pieniadze-pakiety-karty:hover u{
+    color: var(--kolor6);
+    font-size: 40px;
+  }
+  .pieniadze-pakiety-karty:hover .pieniadze-pakiety-karty-tytul{
+    color: var(--kolor6);
+    font-size: 40px;
+  }
+  .pieniadze-pakiety-karty:hover {
+    width: 35%;
+  }
+}
+
+@media (max-width:750px){
+  .pieniadze-pakiety-karty-tytul{font-size: 24px;}
+  .pieniadze-pakiety-karty-zalety{font-size: 19px;}
+  .pieniadze-pakiety-karty-cena{font-size: 24px;}
+}
+@media (max-width:550px){
+  .pieniadze-oplacalnosc-zdjecia img{width: 75px; height: 75px;}
+  .zdjecia-klasa h1{top: 35px; font-size: 15px;}
+  .zdjecia-klasa{margin: 0px 5px 0px 5px;}
+}
+@media (max-width:500px){
   .pieniadze-pakiety-karty-tytul{font-size: 22px;}
   .pieniadze-pakiety-karty-zalety{font-size: 17px;}
   .pieniadze-pakiety-karty-cena{font-size: 22px;}
+}
+@media (max-width:300px){
+  .pieniadze-pakiety-karty-tytul{font-size: 18px;}
+  .pieniadze-pakiety-karty-zalety{font-size: 13px;}
+  .pieniadze-pakiety-karty-cena{font-size: 18px;}
   .pieniadze-oplacalnosc-zdjecia{display: none;}
-  .pieniadze-oplacalnosc-tekst{display: none;}
-  .pieniadze-oplacalnosc-tekst-2{display: flex; font-size: 20px;}
 }
-@media (max-width:750px;){
-  .pieniadze-oplacalnosc-tekst-2{display: flex; font-size: 15px;}
-}
-@media (max-width:500px;){
-  .pieniadze-oplacalnosc-tekst-2{display: flex; font-size: 15px;}
-}
-
-
-
-
-
 
 
 
