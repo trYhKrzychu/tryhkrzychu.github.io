@@ -481,7 +481,7 @@ body nav .indicator {
     width: 35%;
   }
 }
-
+@media (max-width:1000px){.back{display: none;}}
 @media (max-width:750px){
   .pieniadze-pakiety-karty-tytul{font-size: 24px;}
   .pieniadze-pakiety-karty-zalety{font-size: 19px;}
