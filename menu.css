@@ -1,0 +1,312 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
+body{
+    background-color: var(--kolor1);
+    color: white;
+    font-family: var(--font1);
+}
+
+* { 
+    margin: 0; 
+    padding: 0; 
+    box-sizing: border-box;
+}
+:root{
+    --kolor1: #1f1432;
+    --kolor2: #2f204b;
+    --kolor3: #3e2964;
+    --kolor4: #4e347e;
+    --kolor5: #5c3e96;
+    --kolor6: #6d48b1;
+    --kolor7: #7f60bd;
+    --kolor8: #7f60bd;
+    --kolor9: #a892d2;
+    --kolor10: #bdabdb;
+    --font1: Poppins, sans-serif;
+    --font2: Josefin Sans, sans-serif;
+
+}
+::-moz-selection{
+    color: var(--kolor6);
+    background: var(--kolor9);
+}
+::selection{
+    color: var(--kolor6);
+    background: var(--kolor9);
+}
+#loading{
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background-color: var(--kolor3);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 999999;
+}
+.menu{
+    width: 100%;
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    background-color: var(--kolor3);
+    padding: 0px 32px 0px 32px;
+    position: relative;
+    z-index: 2131;
+    user-select: none;
+}
+.menu-przyciski{
+    width: 50%;
+    height: 100px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 35px;
+    background-color: var(--kolor3);
+    transition: 0.3s;
+}
+.przycisk{
+    font-weight: 500;
+    color: var(--kolor9);
+    cursor: pointer;
+    transition: 0.3s;
+}
+.przycisk:hover{
+    color: var(--kolor10);
+}
+.menu-pomoc{
+    width: 50%;
+    height: 100px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+.jezyk, .pomoc{
+    width: 50px;
+    height: 50px;
+    background-color: var(--kolor9);
+    border-radius: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.jezyk{margin-right: 7.5px;}
+.pomoc{margin-left: 7.5px;}
+
+.jezyk img, .pomoc img{
+    width: 50%;
+}
+.jezyk-opcje{
+    width: 50px;
+    height: 100px;
+    border-radius: 70px;
+    padding: 20px;
+    display: none;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+    font-size: 27px;
+    font-weight: 500;
+    position: absolute;
+    background-color: var(--kolor10);
+    bottom: -105px;
+}
+.jezyk-opcje a{
+    text-decoration: none;
+    color: inherit;
+}
+.jezyk-opcje a:hover{
+    text-decoration: underline;
+}
+.jezyk:hover .jezyk-opcje{
+    display: flex;
+    animation: pojawienie 0.2s ease-in-out;
+}
+.jezyk:hover{
+    background-color: var(--kolor10);
+}
+.pomoc:hover{
+    background-color: var(--kolor10);
+}
+.jezyk:hover #nic{
+    display: block;
+}
+#nic{
+    background-color: rgba(0, 0, 0, 0);
+    width: 50px;
+    height: 30px;
+    position: absolute;
+    bottom: -20px;
+    display: none;
+}
+
+@keyframes pojawienie{
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 100%;
+    }
+}
+#tp-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    bottom: 0;
+    cursor: pointer;
+    z-index: 9999;
+    padding: 10px;
+    height: 80px;
+    width: 70px;
+    right: -100px;
+    background-color: var(--kolor4);
+    transition: 0.3s ease;
+    border-radius: 10px 0px 0px 0px;
+    user-select: none;
+}
+  
+#tp-button img {
+   width: 50px;
+}
+
+#tp-button:hover{
+    background-color: var(--kolor6);
+    height: 120px;
+    width: 90px;
+}
+
+@keyframes slideIn {
+    0% {
+      right: -100px;
+    }
+    100% {
+      right: 0;
+    }
+}
+  
+@keyframes slideOut {
+    0% {
+      right: 0;
+    }
+    100% {
+      right: -100px;
+    }
+}
+#tp-button.slide-in {
+    animation: slideIn 0.3s ease forwards;
+}
+  
+#tp-button.slide-out {
+    animation: slideOut 0.3s ease forwards;
+}
+.mobile-menu{
+    display: none;
+    align-items: center;
+    flex-direction: column;
+    background-color: var(--kolor3);
+    font-family: Poppins;
+    width: 75px;
+    height: 75px;
+    color: white;
+    overflow: hidden;
+    transition: 0.3s;
+    position: relative;
+    z-index: 2137;
+}
+.mobile-menu-icon{
+    width: 75px;
+    height: 75px;
+    transition: 0.3s;
+    padding: 10px;
+    z-index: 2;
+}
+.mobile-menu-buttons{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    width: 100%;
+    transition: 0.3s;
+    position: absolute;
+    z-index: 1;
+    left: -150px;
+    bottom: -200px;
+}
+.mobile-menu-button{
+    height: 50px;
+    width: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    padding: 10px;
+    cursor: pointer;
+    opacity: 0;
+}
+.bar1, .bar2, .bar3 {
+    width: 35px;
+    height: 5px;
+    background-color: white;
+    margin: 6px 0;
+    transition: 0.4s;
+}
+
+.mobile-menu.active {
+    width: 150px;
+    height: 275px;
+    margin-top: 200px;
+}
+
+.mobile-menu.active .mobile-menu-button {
+    opacity: 1;
+}
+
+.mobile-menu.active .mobile-menu-icon {
+    width: 150px;
+}
+
+.mobile-menu.active .mobile-menu-buttons {
+    left: 0;
+    bottom: 0;
+}
+
+.mobile-menu-button:hover {
+    background-color: #7f60bd;
+    transition: 0.3s;
+}
+
+.change .bar1 {
+    transform: translate(0, 11px) rotate(-45deg);
+}
+
+.change .bar2 {
+    opacity: 0;
+}
+
+.change .bar3 {
+    transform: translate(0, -11px) rotate(45deg);
+}
+#mobile-bg{
+    visibility: hidden;
+    opacity: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: #bdabdbab;
+    z-index: 2130;
+    position: fixed;
+    user-select: none;
+    transition: 0.3s;
+}
+#mobile-bg.active{
+    visibility: visible;
+    opacity: 1;
+}

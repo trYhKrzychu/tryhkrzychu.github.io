@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>trYh_Krzychu | Portfolio</title>
+    <link rel="icon" href="MEDIA/web/icon.png" type="image/icon"/>
+    <link rel="stylesheet" href="menu.css">
+    <link rel="stylesheet" href="tekst.css">
+    <link rel="stylesheet" href="media.css">
+    <link rel="stylesheet" href="https://unpkg.com/tippy.js@4/themes/light.css" />
+    <script src="script.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="https://unpkg.com/popper.js@1"></script>
+    <script src="https://unpkg.com/tippy.js@5"></script>
+</head>
+<body>
+    <div id="loading">
+        <img src="MEDIA/web/loading.gif">
+    </div>
+    <div id="mobile-bg"></div>
+    <nav class="menu" id="tp-start">
+        <div class="menu-przyciski">
+            <a href="#tp-aboutme"><div class="przycisk">About Me</div></a>
+            <a href="#tp-realization"><div class="przycisk">Realizations</div></a>
+            <a href="#tp-services"><div class="przycisk">Services</div></a>
+            <a href="#tp-footer"><div class="przycisk">Contact</div></a>
+        </div>
+        <div class="mobile-menu" onclick="myFunction(this)">
+            <div class="mobile-menu-icon">
+                <div class="bar1"></div>
+                <div class="bar2"></div>
+                <div class="bar3"></div>
+            </div>
+            <div class="mobile-menu-buttons">
+                <a href="#tp-aboutme"><div class="mobile-menu-button">About Me</div></a>
+                <a href="#tp-realization"><div class="mobile-menu-button">Realizations</div></a>
+                <a href="#tp-services"><div class="mobile-menu-button">Services</div></a>
+                <a href="#tp-footer"><div class="mobile-menu-button">Contact</div></a>
+            </div>
+        </div>
+        <div class="menu-pomoc">
+            <div class="jezyk">
+                <img src="MEDIA/menu/language-outline.svg">
+                <div id="nic"></div>
+                <div class="jezyk-opcje">
+                    <a href="index.html">PL</a>
+                    <a href="index_eng.html">EN</a>
+                </div>
+            </div>
+            <div class="pomoc">
+                <img src="MEDIA/menu/accessibility-outline.svg">
+            </div>
+        </div>
+    </nav>
+    <div class="back" id="tp-button">
+        <a href="#tp-start"><img src="MEDIA/shapes/arrow-up-outline.svg" id="tp-button-img"></a>
+    </div>
+
+    <article class="main">
+        <div class="grupa1">
+            <div class="tekst">
+                <div class="przywitanie">Welcome to my portfolio!</div>
+                <div class="opis">I'm glad you're here! This is a place where I can share my achievements and skills. Each of my projects has been a challenge, allowing me to grow and learn new things. I strive to combine an innovative approach with aesthetics and functionality, creating unforgettable experiences.<br> Enjoy your viewing!</div>
+            </div>
+            <img src="MEDIA/about/photo.png" class="grupa1-photo">
+        </div>
+        <div id="ksztalty" style="user-select: none;">
+            <img id="prostokaty" src="MEDIA/shapes/prostokaty.svg">
+            <a href="#tp-aboutme"><img id="arrow" src="MEDIA/shapes/arrow-down-outline.svg"></a>
+        </div>
+        <div class="aboutme-main"  id="tp-aboutme">
+            <div class="aboutme">
+                <video autoplay muted loop controls disablepictureinpicture><source src="MEDIA/about/intro.mp4" type="video/mp4"/></video>
+                <div class="aboutme-tekst">
+                    Hey there, I'm Krzysztof, an enthusiast of computer games, IT, and cars. However, what truly fascinates me is not just the technology itself, but the opportunity to create something new and inspiring on the web.
+                </div>
+            </div>
+            <div class="aboutme">
+                <img src="MEDIA/about/kodowanie.gif" alt="kodowanie">
+                <div class="aboutme-tekst" style="text-align: left;">
+                    I'm a young soul full of energy, eager to work, and hungry for acquiring new skills. Creativity and innovation are key to me as I dive into the world of web development. I quickly pick up new things, and every challenge is an opportunity for personal growth.
+                </div>
+            </div>
+            <div class="aboutme">
+                <img src="MEDIA/about/photos.gif" alt="kodowanie">
+                <div class="aboutme-tekst">
+                    I'm open to any proposals and ready to collaborate in a team. I believe the best projects come to life in an atmosphere of collaboration and idea exchange. My passion is not just coding but crafting websites that not only fulfill functions but also spark interest and leave a lasting impression. 
+                </div>
+            </div>
+        </div>
+        <div class="made" id="tp-realization">
+            <div class="made-text">
+                <div class="made-title">
+                    Realizations
+                </div>
+                <div class="made-text-des">
+                    Here are a few of the projects I've had the privilege to work on:
+                </div>
+            </div>
+            <div class="vr-made"></div>
+            <div class="made-websites">
+                <div class="made-web-window">
+                    <img src="MEDIA/realizatons/rel1.png"alt="realizacje" id="made-web-window-img">
+                    <video autoplay muted loop><source src="MEDIA/realizatons/kiwi-kom.mp4" type="video/mp4"/></video>
+                   <a href="https://tryhkrzychu.github.io/kiwi/index.html" target="_blank">
+                    <div class="made-web-window-text" id="made-web-windows-text-tippy">
+                       <img src="MEDIA/realizatons/logo-kiwi-kom.svg">
+                    </div></a>
+                </div>
+                <div class="made-web-window">
+                    <img src="MEDIA/realizatons/rel2.png"alt="realizacje" id="made-web-window-img">
+                    <video autoplay muted loop><source src="MEDIA/realizatons/e-korki.mp4" type="video/mp4"/></video>
+                    <a href="https://tryhkrzychu.github.io/twst/index.html" target="_blank"><div class="made-web-window-text" id="made-web-windows-text-tippy">
+                        <img src="MEDIA/realizatons/logo-e-korki.svg">
+                     </div></a>
+                </div>
+                <div class="made-web-window">
+                    <img src="MEDIA/realizatons/rel1.png"alt="realizacje" id="made-web-window-img" style="filter: blur(100px);">
+                    <video autoplay muted loop><source src="#" type="video/mp4"/></video>
+                    <div class="made-web-window-text">
+                        <h1>Coming soon...</h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="ksztalty-2">
+            <img id="trojkaty" src="MEDIA/shapes/trojkaty.svg">
+            <img id="kola" src="MEDIA/shapes/kola.svg">
+        </div>
+        <div class="services" id="tp-services">
+            <div class="services-text">
+                <div class="services-title">
+                    Services
+                </div>
+                <div class="services-des">
+                    Here you will find the services that I provide
+                </div>
+            </div>
+            <div class="vr-servies"  style="border-left: 3px solid #6d48b1; height: 400px;"></div>
+            <div class="services-examples">
+                <div class="services-examples-card">
+                    <div class="services-examples-card-photo">
+                        <img src="MEDIA/services/photoshopss.png"alt="uslugi" id="services-examples-card-img">
+                        <video autoplay muted loop> <source src="MEDIA/services/photoshop.mp4" type="video/mp4"></video>
+                    </div>
+                    <div class="services-examples-card-des">
+                        <h1>Adobe Photoshop</h1>
+                        <img src="MEDIA/services/photoshopico.png">
+                    </div>
+                </div>
+                <div class="services-examples-card">
+                    <div class="services-examples-card-photo">
+                        <img src="MEDIA/services/premieress.png"alt="uslugi" id="services-examples-card-img">
+                        <video autoplay muted loop> <source src="MEDIA/services/premiere.mp4" type="video/mp4"></video>
+                    </div>
+                    <div class="services-examples-card-des">
+                        <h1>Adobe Premiere Pro</h1>
+                        <img src="MEDIA/services/premiereico.png">
+                    </div>
+                </div>
+                <div class="services-examples-card">
+                    <div class="services-examples-card-photo">
+                        <img src="MEDIA/services/visualss.png"alt="uslugi" id="services-examples-card-img">
+                        <video autoplay muted loop> <source src="MEDIA/services/visual.mp4" type="video/mp4"></video>
+                    </div>
+                    <div class="services-examples-card-des">
+                        <h1>Visual Studio Code</h1>
+                        <img src="MEDIA/services/visualico.png">
+                    </div>
+                </div>
+                <div class="services-examples-card">
+                    <div class="services-examples-card-photo">
+                        <img src="MEDIA/services/cmdss.png"alt="uslugi" id="services-examples-card-img">
+                        <video autoplay muted loop> <source src="MEDIA/services/cmd.mp4" type="video/mp4"></video>
+                    </div>
+                    <div class="services-examples-card-des">
+                        <h1>Network Admin</h1>
+                        <img src="MEDIA/services/terminalico.png">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="kropki"><img src="MEDIA/shapes/kropki.svg"></div>
+        <footer id="tp-footer">
+            <article id="footer-up">
+                <div class="footer-newsletter">
+                    <div class="footer-newsletter-mail">
+                        <div id="footer-des">
+                            <h1>Newsletter</h1>
+                            <h2>If you want to stay with my for a while...</h2>
+                        </div>
+                        <form>
+                            <input type="email" required placeholder="Your email...">
+                            <button type="submit" id="tippy-footer"><img src="MEDIA/footer/arrow.svg"></button>
+                        </form>
+                    </div>
+                </div>
+                <div class="footer-contact">
+                    <h1>Contact</h1>
+                    <h2>Discord: trYh_Krzychu</h2>
+                    <h2>Steam: trYh_Krzychu</h2>
+                </div>
+                <div class="footer-website">
+                    <a href="#tp-aboutme">About me</a>
+                    <a href="#tp-realization">Realizations</a>
+                    <a href="#tp-services">Services</a>
+                    <a href="#tp-footer">Contact</a>
+                </div>
+            </article>
+            <div class="footer-media">
+                <div class="footer-media-tps">
+                    <a href="https://discordapp.com/users/669238832088088578"><div class="footer-media-tp"><img src="MEDIA/footer/discord.svg"></div></a>
+                    <a href="https://www.youtube.com/channel/UCOrHIP5fAGmNDqeG27DRyzA"><div class="footer-media-tp"><img src="MEDIA/footer/youtube.svg"></div></a>
+                    <a href="https://steamcommunity.com/profiles/76561199019330277/"><div class="footer-media-tp"><img src="MEDIA/footer/steam.svg"></div></a>
+                    <a href="https://github.com/trYhKrzychu"><div class="footer-media-tp"><img src="MEDIA/footer/github.svg"></div></a>
+                </div>
+                <div class="footer-media-made">
+                    <h1>Made by: trYh_Krzychu<br>
+                    All Rights Reserved ©</h1>
+                </div>
+            </div>
+        </footer>
+    </article>
+    <script>
+        function myFunction(mobile) {
+            mobile.classList.toggle("change");
+            var menu = document.querySelector('.mobile-menu');
+            menu.classList.toggle('active');
+            
+            var mobileBg = document.getElementById('mobile-bg');
+            mobileBg.classList.toggle('active');
+        }
+    
+        document.addEventListener('click', function(e) {
+            var menu = document.querySelector('.mobile-menu');
+            if (!menu.contains(e.target)) {
+                menu.classList.remove('active');
+                var icon = document.querySelector('.mobile-menu-icon');
+                icon.classList.remove('change');
+    
+                var mobileBg = document.getElementById('mobile-bg');
+                mobileBg.classList.remove('active');
+            }
+        });
+    </script>
+    
+</body>
+</html>
