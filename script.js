@@ -18,25 +18,7 @@ window.addEventListener("scroll", function () {
               loader.style.display = "none";
       })
 
-var button = document.getElementById("tp-button");
-var scrollingUp = false;
 
-window.onscroll = function () {
-  var scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-  if (scrollTop > 90 && !scrollingUp) {
-    button.classList.add("slide-in");
-    button.classList.remove("slide-out");
-    button.style.display = "flex";
-  } else if (scrollTop <= 90) {
-    button.classList.remove("slide-in");
-    scrollingUp = false;
-    if (!button.classList.contains("slide-out")) {
-      button.classList.add("slide-out");
-    }
-  } else {
-    scrollingUp = true;
-  }
-};
 
 ScrollReveal().reveal('.aboutme-main', {delay: 250});
 ScrollReveal().reveal('.made-web-window', { interval: 200 });
