@@ -20,9 +20,12 @@ window.addEventListener("scroll", function () {
 
 
 
-ScrollReveal().reveal('.aboutme-main', {delay: 250});
-ScrollReveal().reveal('.made-web-window', { interval: 200 });
-ScrollReveal().reveal('.services-examples-card', { delay: 250 });
+      if (window.innerWidth > 850) {
+        ScrollReveal().reveal('.aboutme-main', { delay: 250 });
+        ScrollReveal().reveal('.made-web-window', { interval: 200 });
+        ScrollReveal().reveal('.services-examples-card', { delay: 250 });
+    }
+    
 
 const targetElement = document.querySelector('.made');
 const kolor1 = getComputedStyle(document.documentElement).getPropertyValue('--kolor1');
