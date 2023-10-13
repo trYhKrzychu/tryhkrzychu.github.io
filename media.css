@@ -17,6 +17,9 @@
     }
     .made-text{
         padding: 0px 0px 0px 25px;
+        height: 225px;
+        align-items: flex-start;
+        justify-content: center;
     }
 }
 
@@ -78,8 +81,9 @@
         height: 225px;
     }
     .services-des{
-        font-size: 12px;
-        width: 1100px
+        font-size: 14px;
+        width: 1100px;
+        width: 100%;
     }
     .services-text{
         padding: 25px;
@@ -110,6 +114,9 @@
     }
     .footer-contact{
         width: 30%;
+    }
+    .made{
+        margin-top: 0px;
     }
 }
 
@@ -142,18 +149,24 @@
     .made-title{
         font-size: 35px;
     }
+    .services-title{
+        font-size: 35px;
+    }
     .made-text-des{
-        font-size: 12px;
+        font-size: 14px;
         text-align: center;
     }
     .made-text{
         width: 25%;
+        height: 225px;
         align-items: center;
+        justify-content: center;
     }
     .made-websites{
         width: 70%;
     }
     .made{
+        height: fit-content;
         margin-top: 200px;
     }
     .services-text{
@@ -221,6 +234,7 @@
         font-size: 12px;
     }
     .made{
+        align-items: center;
         flex-direction: column;
     }
     .vr-made{display: none;}
@@ -234,6 +248,9 @@
     .made-title{
         font-size: 45px;
     }
+    .services-title{
+        font-size: 45px;
+    }
     .made-text-des{
         font-size: 20px;
         text-align: center;
@@ -241,7 +258,10 @@
     .made-text{
         width: 70%;
         padding: 0;
-        margin-bottom: -50px;
+    }
+    .services-des{
+        font-size: 20px;
+        width: 150%;
     }
 }
 
@@ -283,9 +303,6 @@
     .made-web-window{
         width: 225px;
         height: 225px;
-    }
-    .services-des{
-        font-size: 12px;
     }
     .services-examples-card:hover #services-examples-card-img{
         opacity: 100%;
@@ -378,6 +395,7 @@
         text-align: center;
     }
     .footer-newsletter button{margin-top: -25px;}
+    .services-des{width: 200%;}
 }
 
 
@@ -401,6 +419,9 @@
         font-size: 14px;
     }
     .made-title{
+        font-size: 30px;
+    }
+    .services-title{
         font-size: 30px;
     }
     .made{
@@ -432,6 +453,10 @@
     }
     .kropki{
         margin-top: 400px;
+    }
+    .services-des{
+        font-size: 14px;
+        width: 100vw;
     }
 }
 

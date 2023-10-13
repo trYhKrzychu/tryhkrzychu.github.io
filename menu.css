@@ -86,7 +86,7 @@ html, body{
     justify-content: flex-end;
     align-items: center;
 }
-.jezyk, .pomoc{
+.pomoc{
     width: 50px;
     height: 50px;
     background-color: var(--kolor9);
@@ -100,47 +100,15 @@ html, body{
     transition: 0.2s;
 }
 
-.jezyk{margin-right: 7.5px;}
 .pomoc{margin-left: 7.5px;}
 
-.jezyk img, .pomoc img{
+.pomoc img{
     width: 50%;
-}
-.jezyk-opcje{
-    width: 50px;
-    height: 100px;
-    border-radius: 70px;
-    padding: 20px;
-    display: none;
-    justify-content: space-around;
-    align-items: center;
-    flex-direction: column;
-    font-size: 27px;
-    font-weight: 500;
-    position: absolute;
-    background-color: var(--kolor10);
-    bottom: -105px;
-}
-.jezyk-opcje a{
-    text-decoration: none;
-    color: inherit;
-}
-.jezyk-opcje a:hover{
-    text-decoration: underline;
-}
-.jezyk:hover .jezyk-opcje{
-    display: flex;
-    animation: pojawienie 0.2s ease-in-out;
-}
-.jezyk:hover{
-    background-color: var(--kolor10);
 }
 .pomoc:hover{
     background-color: var(--kolor10);
 }
-.jezyk:hover #nic{
-    display: block;
-}
+
 #nic{
     background-color: rgba(0, 0, 0, 0);
     width: 50px;

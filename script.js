@@ -19,7 +19,13 @@ function handleLocalStorageScroll() {
       localStorage.setItem("scrollPosition", window.scrollY);
   });
 }
-
+document.addEventListener("DOMContentLoaded", function() {
+    var autoplayVideos = document.querySelectorAll("video[autoplay]");
+  
+    autoplayVideos.forEach(function(video) {
+      video.play();
+    });
+  });
 function handleWindowLoad() {
   const loader = document.getElementById("loading");
   window.addEventListener("load", function () {
