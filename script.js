@@ -19,13 +19,7 @@ function handleLocalStorageScroll() {
       localStorage.setItem("scrollPosition", window.scrollY);
   });
 }
-document.addEventListener("DOMContentLoaded", function() {
-    var autoplayVideos = document.querySelectorAll("video[autoplay]");
   
-    autoplayVideos.forEach(function(video) {
-      video.play();
-    });
-  });
 function handleWindowLoad() {
   const loader = document.getElementById("loading");
   window.addEventListener("load", function () {
@@ -33,6 +27,50 @@ function handleWindowLoad() {
   });
 }
 
+
+document.addEventListener("DOMContentLoaded", function() {
+    var autoplayVideos = document.querySelectorAll("video[autoplay]");
+  
+    // Sprawdzamy, czy użytkownik korzysta z urządzenia mobilnego
+    var isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+  
+    autoplayVideos.forEach(function(video) {
+      if (isMobile) {
+        // Jeśli użytkownik korzysta z urządzenia mobilnego, zatrzymujemy wideo
+        video.pause();
+      } else {
+        // Jeśli nie, sprawdzamy widoczność i odtwarzamy
+        if (isElementVisible(video) && isElementInViewport(video)) {
+          video.play();
+        } else {
+          video.pause();
+          if (!isElementVisible(video)) {
+            video.addEventListener("mouseenter", function() {
+              video.style.opacity = "1";
+              video.play();
+            });
+          }
+        }
+      }
+    });
+  
+    function isElementVisible(element) {
+      var style = window.getComputedStyle(element);
+      return style.opacity !== "0" && style.display !== "none";
+    }
+  
+    function isElementInViewport(element) {
+      var rect = element.getBoundingClientRect();
+      return (
+        rect.top <= (window.innerHeight || document.documentElement.clientHeight) &&
+        rect.bottom >= 0 &&
+        rect.left <= (window.innerWidth || document.documentElement.clientWidth) &&
+        rect.right >= 0
+      );
+    }
+  });
+  
+  
 function handleScrollEffects() {
   const windowWidth = window.innerWidth;
 

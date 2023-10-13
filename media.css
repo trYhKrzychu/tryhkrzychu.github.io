@@ -349,6 +349,12 @@
 
 
 @media(max-width:750px){
+    .aboutme video{
+        display: none;
+    }
+    #aboutme-gif{
+        display: block !important;
+    }
     .aboutme{
         flex-direction: column;
     }
@@ -524,5 +530,8 @@
     }
     .aboutme img{
         display: none;
+    }
+    #aboutme-gif{
+        display: none !important;
     }
 }
