@@ -31,15 +31,12 @@ function handleWindowLoad() {
 document.addEventListener("DOMContentLoaded", function() {
     var autoplayVideos = document.querySelectorAll("video[autoplay]");
   
-    // Sprawdzamy, czy użytkownik korzysta z urządzenia mobilnego
     var isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
   
     autoplayVideos.forEach(function(video) {
       if (isMobile) {
-        // Jeśli użytkownik korzysta z urządzenia mobilnego, zatrzymujemy wideo
         video.pause();
       } else {
-        // Jeśli nie, sprawdzamy widoczność i odtwarzamy
         if (isElementVisible(video) && isElementInViewport(video)) {
           video.play();
         } else {
