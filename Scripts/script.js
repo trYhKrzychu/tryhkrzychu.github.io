@@ -54,20 +54,7 @@ document.addEventListener("DOMContentLoaded", function() {
       }
     });
   
-    function isElementVisible(element) {
-      var style = window.getComputedStyle(element);
-      return style.opacity !== "0" && style.display !== "none";
-    }
-  
-    function isElementInViewport(element) {
-      var rect = element.getBoundingClientRect();
-      return (
-        rect.top <= (window.innerHeight || document.documentElement.clientHeight) &&
-        rect.bottom >= 0 &&
-        rect.left <= (window.innerWidth || document.documentElement.clientWidth) &&
-        rect.right >= 0
-      );
-    }
+
   });
   
   
