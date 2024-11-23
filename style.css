@@ -14,15 +14,15 @@ html, body{
 }
 :root{
     --kolor1: #1f1432;
-    --kolor2: #2f204b;
-    --kolor3: #3e2964;
+    --kolor2: #2f204b; /**/
+    --kolor3: #3e2964; /**/
     --kolor4: #4e347e;
-    --kolor5: #5c3e96;
+    --kolor5: #5c3e96; /**/
     --kolor6: #6d48b1;
-    --kolor7: #7f60bd;
+    --kolor7: #7f60bd; /**/
     --kolor8: #7f60bd;
     --kolor9: #a892d2;
-    --kolor10: #bdabdb;
+    --kolor10: #bdabdb; /**/
     --font1: Poppins, sans-serif;
     --font2: Josefin Sans, sans-serif;
 
