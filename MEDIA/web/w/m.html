@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Walentynkowe Zaproszenie</title>
+  <!-- Ładujemy Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    /* Reset i globalne style */
+    * {
+      box-sizing: border-box;
+    }
+    body, html {
+      margin: 0;
+      padding: 0;
+      width: 100%;
+      height: 100%;
+      font-family: 'Roboto', sans-serif;
+      /* Wielowarstwowy gradient w tle */
+      background: linear-gradient(135deg, #ff9a9e, #fad0c4, #fad0c4);
+      background-size: 400% 400%;
+      animation: gradientBG 15s ease infinite;
+      overflow: hidden;
+      position: relative;
+    }
+    @keyframes gradientBG {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+    
+    /* Powitalny napis */
+    #welcome {
+      position: absolute;
+      top: 20px;
+      width: 100%;
+      text-align: center;
+      font-size: 2.5em;
+      color: #fff;
+      font-family: 'Pacifico', cursive;
+      text-shadow: 2px 2px 5px rgba(0,0,0,0.5);
+      z-index: 210;
+    }
+    
+    /* Obszar "biurka" */
+    #desk {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      /* Subtelny, drewniany efekt */
+      background: linear-gradient(135deg, #d3b191, #f5e6d3);
+      overflow: hidden;
+    }
+    
+    /* Styl nakładki (overlay) – pojawia się przy rozwinięciu listu */
+    #overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.5);
+      opacity: 0;
+      visibility: hidden;
+      transition: opacity 0.5s ease;
+      z-index: 150;
+    }
+    #overlay.active {
+      opacity: 1;
+      visibility: visible;
+    }
+    
+    /* Elementy przeciągalne */
+    .draggable {
+      position: absolute;
+      cursor: grab;
+      user-select: none;
+      transition: transform 0.2s;
+    }
+    .draggable:active {
+      cursor: grabbing;
+      transform: scale(1.1);
+    }
+    
+    /* Przykładowe serduszko wykonane w CSS */
+    .heart {
+      width: 50px;
+      height: 50px;
+      background: red;
+      position: absolute;
+      transform: rotate(-45deg);
+      border-radius: 5px;
+    }
+    .heart:before,
+    .heart:after {
+      content: "";
+      position: absolute;
+      width: 50px;
+      height: 50px;
+      background: red;
+      border-radius: 50%;
+    }
+    .heart:before {
+      top: -25px;
+      left: 0;
+    }
+    .heart:after {
+      left: 25px;
+      top: 0;
+    }
+    
+    /* Nowy element – placeholder na zdjęcie */
+    .photo-placeholder {
+      width: 100px;
+      height: 100px;
+      border: 3px solid #fff;
+      border-radius: 10px;
+      box-shadow: 2px 2px 6px rgba(0,0,0,0.3);
+    }
+    .photo1{
+        background: url('p.jpg') center/cover no-repeat;
+    }
+    .photo2{
+        background: url('n.jpg') center/cover no-repeat;
+    }
+    
+    /* Animacja pop-in dla pojawiających się elementów */
+    .animate-pop {
+      animation: popIn 0.5s ease-out;
+    }
+    @keyframes popIn {
+      0% { transform: scale(0); opacity: 0; }
+      100% { transform: scale(1); opacity: 1; }
+    }
+    
+    /* Fikuśne unoszące się teksty */
+    .floating-text {
+      position: absolute;
+      color: #800000;
+      font-size: 1.2em;
+      font-weight: 500;
+      text-shadow: 1px 1px 2px #fff;
+      animation: float 10s infinite;
+      user-select: none;
+    }
+    @keyframes float {
+      0% { transform: translateY(0px); }
+      50% { transform: translateY(-20px); }
+      100% { transform: translateY(0px); }
+    }
+    
+    /* Styl listu (zaproszenia) */
+    #letter {
+      position: absolute;
+      width: 150px;
+      height: 100px;
+      background: #fff;
+      border: 2px solid #ccc;
+      box-shadow: 5px 5px 15px rgba(0,0,0,0.4);
+      top: 70%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      cursor: pointer;
+      transition: all 0.8s ease;
+      z-index: 200;
+      overflow: hidden;
+      border-radius: 10px;
+    }
+    /* Domyślny stan listu – złożony */
+    #letter.folded {
+      width: 150px;
+      height: 100px;
+      transform: rotate(0deg);
+    }
+    /* Stan rozwinięty – efekt wow */
+    #letter.unfolded {
+      width: 80%;
+      height: 70%;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      cursor: default;
+      border-radius: 20px;
+    }
+    /* Treść listu – początkowo ukryta */
+    #letter-content {
+      display: none;
+      padding: 20px;
+      overflow-y: auto;
+      height: 100%;
+      font-size: 1.1em;
+      line-height: 1.6;
+      text-align: center;
+      padding: 50px 200px 50px 200px;
+    }
+    @media (max-width: 600px) {
+      #letter-content {
+        padding: 20px;
+      }
+      .floating-text{
+        display: none;
+      }
+    }
+    /* Gdy list rozwinięty, treść jest widoczna */
+    #letter.unfolded #letter-content {
+      display: block;
+    }
+    
+    /* Przycisk zamknij – poprawiony wygląd i pozycjonowanie */
+    #close-letter {
+      position: absolute;
+      top: 15px;
+      right: 15px;
+      background: #ff4d4d;
+      border: none;
+      border-radius: 5px;
+      color: white;
+      padding: 8px 12px;
+      width: 80px;
+      height: 30px;
+      cursor: pointer;
+      z-index: 9999;
+      transition: background 0.3s ease, transform 0.3s ease;
+      opacity: 0;
+      visibility: hidden;
+    }
+    #close-letter:hover {
+      background: #e04343;
+      transform: scale(1.05);
+    }
+    /* Przycisk widoczny gdy list rozwinięty */
+    #letter.unfolded ~ #close-letter {
+      opacity: 1;
+      visibility: visible;
+    }
+    
+    /* Responsywność – zmiana rozmiaru tekstu */
+    @media (max-width: 600px) {
+      #welcome {
+        font-size: 1.8em;
+      }
+      .floating-text {
+        font-size: 1em;
+      }
+    }
+    h3{
+        color: #800000;
+        font-size: 1.5em;
+        font-weight: 500;
+        text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <!-- Powitalny napis -->
+  <div id="welcome">Witaj na Walentynkowym Zaproszeniu!</div>
+  
+  <!-- Obszar "biurka" -->
+  <div id="desk">
+    <!-- Nakładka przy rozwiniętym liście -->
+    <div id="overlay"></div>
+    
+    <!-- Kilka przykładowych, przeciągalnych elementów -->
+    <div class="draggable heart animate-pop" style="top: 25%; left: 30%;"></div>
+    <div class="draggable heart animate-pop" style="top: 30%; left: 70%;"></div>
+    <div class="draggable heart animate-pop" style="top: 75%; left: 30%;"></div>
+    <div class="draggable heart animate-pop" style="top: 70%; left: 70%;"></div>
+    
+    <!-- Przykładowe unoszące się teksty -->
+    <div class="floating-text" style="top: 20%; left: 40%;">Dla kogoś kto jest super!</div>
+    <div class="floating-text" style="top: 50%; left: 30%;">Jesteś wyjątkowa!</div>
+    <div class="floating-text" style="top: 50%; left: 60%;">Walentynki!</div>
+    
+    <!-- Nowy element: przykładowy placeholder na zdjęcie -->
+    <div class="draggable photo-placeholder animate-pop photo1" style="top: 30%; left: 50%;"></div>
+    <div class="draggable photo-placeholder animate-pop photo2" style="top: 50%; left: 45%;"></div>
+    
+    <!-- Złożony list – zaproszenie -->
+    <div id="letter" class="folded animate-pop"><h3>Martynka</h3>
+      <!-- Treść listu – widoczna po rozwinięciu -->
+      <div id="letter-content">
+        <p>Piszę do Ciebie ten list, bo są rzeczy, które trudno wyrazić w zwykłej rozmowie. Od naszego ostatniego spotkania nie mogę przestać o Tobie myśleć. Spędziłem z Tobą cudowny czas i z każdą chwilą coraz bardziej utwierdzam się w przekonaniu, że jesteś kimś wyjątkowym.</p>
+        <p>Uwielbiam Twój uśmiech, tę iskrę radości w oczach i Twoją niezwykłą inteligencję. Każda rozmowa z Tobą to nowa podróż – pełna śmiechu, ciepła i momentów, które na długo zostają w pamięci. Każda wspólna chwila, każde czułe słowo czy chichot – to coś, co ogromnie cenię.</p>
+        <p>Chcę, żebyś wiedziała, że darzę Cię wielkim uczuciem i zaufaniem. Może to zabrzmi nieco śmiało, zwłaszcza w liście, ale… po prostu musiałem to napisać.</p>
+        <p>Zbliżają się Walentynki – dzień pełen czułości i pięknych gestów. Chciałbym spędzić go z Tobą. Myślałem o wspólnym wypadzie po Krakowie, gdzie moglibyśmy razem cieszyć się tym wyjątkowym dniem. Co Ty na to?</p>
+        <p>Mam nadzieję, że ten list wywoła uśmiech na Twojej twarzy 😀</p>
+        <p style="font-weight:bold;">Krzysztof</p>
+      </div>
+    </div>
+    
+    <!-- Przycisk zamknij -->
+    <button id="close-letter">Zamknij</button>
+  </div>
+  
+  <script>
+    // Funkcja umożliwiająca przeciąganie elementów z klasą "draggable"
+    function makeDraggable(el) {
+      let offsetX = 0, offsetY = 0, startX, startY;
+  
+      function mouseDown(e) {
+        e.preventDefault();
+        startX = e.clientX;
+        startY = e.clientY;
+        offsetX = parseInt(window.getComputedStyle(el).left) || 0;
+        offsetY = parseInt(window.getComputedStyle(el).top) || 0;
+        document.addEventListener('mousemove', mouseMove);
+        document.addEventListener('mouseup', mouseUp);
+      }
+      function mouseMove(e) {
+        let dx = e.clientX - startX;
+        let dy = e.clientY - startY;
+        el.style.left = (offsetX + dx) + "px";
+        el.style.top = (offsetY + dy) + "px";
+      }
+      function mouseUp(e) {
+        document.removeEventListener('mousemove', mouseMove);
+        document.removeEventListener('mouseup', mouseUp);
+      }
+      el.addEventListener('mousedown', mouseDown);
+  
+      // Obsługa dotyku
+      el.addEventListener('touchstart', function(e) {
+        e.preventDefault();
+        startX = e.touches[0].clientX;
+        startY = e.touches[0].clientY;
+        offsetX = parseInt(window.getComputedStyle(el).left) || 0;
+        offsetY = parseInt(window.getComputedStyle(el).top) || 0;
+        document.addEventListener('touchmove', touchMove);
+        document.addEventListener('touchend', touchEnd);
+      });
+      function touchMove(e) {
+        let dx = e.touches[0].clientX - startX;
+        let dy = e.touches[0].clientY - startY;
+        el.style.left = (offsetX + dx) + "px";
+        el.style.top = (offsetY + dy) + "px";
+      }
+      function touchEnd(e) {
+        document.removeEventListener('touchmove', touchMove);
+        document.removeEventListener('touchend', touchEnd);
+      }
+    }
+  
+    // Inicjalizacja dla wszystkich elementów z klasą "draggable"
+    document.querySelectorAll('.draggable').forEach(function(el) {
+      makeDraggable(el);
+    });
+  
+    // Funkcjonalność rozwijania/zamykania listu
+    const letter = document.getElementById('letter');
+    const closeBtn = document.getElementById('close-letter');
+    const overlay = document.getElementById('overlay');
+    let letterUnfolded = false;
+  
+    function unfoldLetter() {
+      if (!letterUnfolded) {
+        letter.classList.remove('folded');
+        letter.classList.add('unfolded');
+        overlay.classList.add('active');
+        letterUnfolded = true;
+      }
+    }
+  
+    function foldLetter() {
+      if (letterUnfolded) {
+        letter.classList.remove('unfolded');
+        letter.classList.add('folded');
+        overlay.classList.remove('active');
+        letterUnfolded = false;
+      }
+    }
+  
+    // Kliknięcie w list (jeśli złożony) powoduje rozwinięcie
+    letter.addEventListener('click', function(e) {
+      if (!letterUnfolded) {
+        unfoldLetter();
+      }
+    });
+  
+    // Kliknięcie przycisku "Zamknij" powoduje złożenie listu
+    closeBtn.addEventListener('click', function(e) {
+      foldLetter();
+      // Zatrzymanie propagacji, żeby nie uruchomić kliknięcia na liście
+      e.stopPropagation();
+    });
+  
+    // Zapobiegamy przypadkowemu przeciąganiu listu, gdy jest rozwinięty
+    letter.addEventListener('mousedown', function(e) {
+      if(letterUnfolded) {
+        e.stopPropagation();
+      }
+    });
+  </script>
+</body>
+</html>
